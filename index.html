@@ -54,7 +54,12 @@
 	</script>
 	
 	<header>
-      <h1>Connecting You With Your Future</h1>
+		<fb:login-button 
+		  scope="public_profile,email"
+		  autologoutlink="true"
+		  onlogin="checkLoginState();">
+		</fb:login-button>
+      <!-- <h1>Connecting You With Your Future</h1> -->
 	  
     </header>
 	
@@ -64,11 +69,6 @@
         <a href="about.html">About</a>
 	    <a href="contact.html">Contact</a>
 	    <a href="faq.html">FAQ</a>
-		<fb:login-button 
-		  scope="public_profile,email"
-		  autologoutlink="true"
-		  onlogin="checkLoginState();">
-		</fb:login-button>
 		
     </nav>
 	<div id="wrapper">
