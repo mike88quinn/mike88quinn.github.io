@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="bridger.css">
+    <title>Bridger</title>
+    <meta charset="utf-8">
+	<!-- Configure a viewport meta tag in the head section that configures the width to
+	the device-width and sets the initial-scale to 1.0. (Chap 8) -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+  </head>
+  <body>
+  
+  
+	<script>
+	  window.fbAsyncInit = function() {
+		FB.init({
+		  appId      : '698670277184912',
+		  cookie     : true,
+		  xfbml      : true,
+		  version    : 'v3.2'
+		});
+		  
+		
+		FB.getLoginStatus(function(response) {
+			statusChangeCallback(response);
+		});   
+		  
+	  };
+
+	  (function(d, s, id){
+		 var js, fjs = d.getElementsByTagName(s)[0];
+		 if (d.getElementById(id)) {return;}
+		 js = d.createElement(s); js.id = id;
+		 js.src = "https://connect.facebook.net/en_US/sdk.js";
+		 fjs.parentNode.insertBefore(js, fjs);
+	   }(document, 'script', 'facebook-jssdk'));
+	   
+	   function statusChangeCallback(response){
+	     if(response.status === 'connected'){
+		   consil.log('Logged in and authenticated');
+		 } else {
+		   consol.log('Not authenticated');
+		 }
+		}
+		
+		function checkLoginState() {
+		  FB.getLoginStatus(function(response) {
+		    statusChangeCallback(response);
+		  });
+		}
+	</script>
+	
+	<header>
+      <h1>Connecting You With Your Future</h1>
+	  
+    </header>
+	
+	
+	<nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+	    <a href="contact.html">Contact</a>
+	    <a href="faq.html">FAQ</a>
+		<fb:login-button 
+		  scope="public_profile,email"
+		  onlogin="checkLoginState();">
+		</fb:login-button>
+    </nav>
+	<div id="wrapper">
+	
+    <main>
+      <h2>Bridge Connections</h2>
+      <p><span class="resort">Bridger</span> was created to allow Students, Alumni, and Staff of FHSU to find eachother. The purpose of finding eachother is to increase networking for virtual students. Students still in school can find eachother to meet up and work on classes. Students can also make connections with Alumni to help further or jumpstart their careers.</p>
+    
+	
+	
+
+	
+	</main>
+    <footer class="footer">
+     Bridger<br>
+      E-mail: <a href="mailto:MTQuinn@mail.fhsu.edu">Mike Quinn</a>
+    </footer>
+	</div>
+  </body>
+</html>
