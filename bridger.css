@@ -40,7 +40,7 @@ header{
 	   
 	   /* The header element selector. Remove the style declarations that configure the background image. Configure
 	   text color to #FFFFFF, height to 120px, top padding to 30px, and left padding to 3em. (Chap 7) */
-       /*background-position: left;*/
+       background-position: right;
        background-repeat: no-repeat;
 	   /* The header element Selector. Remove declarations for line height and indented text. Add declarations to
 	   configure 60px height, centered text, and 15px top padding. (Chap 6) */
