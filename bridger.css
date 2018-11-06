@@ -80,7 +80,7 @@ nav ul {
 (hint: use the nav a descendant selector with text-decoration: none; ) (Chap 5) */		
 nav a { 
 	  text-decoration: none; 
-		padding-left: 25px;
+		padding: 50px;
 	  }
 /* 	Style unvisited navigation hyperlinks. Configure the :link pseudo-class with medium blue text color (#5C7FA3).
 	Style visited navigation hyperlinks. Configure the :visited pseudo-class with dark blue text color (#344873).
