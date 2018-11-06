@@ -73,8 +73,6 @@ nav ul {
 		font-size: 1.2em;
 		list-style-type: none;
 		list-style-image: none;
-		border: 1px solid #000000;
-		display: block;
 		}
 
 /* The nav a element selector. Code styles to eliminate the display of the underline for hyperlinks
