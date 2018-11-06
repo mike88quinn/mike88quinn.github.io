@@ -59,7 +59,7 @@ nav   {
 	  background-color declaration—the nav area will pick up the background color of the wrapper id.
 	  Remove the text-align declaration. Change the padding to 1.5em. Set 120% font size. Configure
 	  left float and a width of 160 pixels. (Chap 7) */
-	  font-size: 120%;
+	  font-size: 100%;
 	  background: #a2ffe3;
 	  text-align: center;
 	  border-top: 1px solid #000000;
