@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<link rel="stylesheet" href="bridger.css">
+		<title>Bridger :: FAQ</title>
+		<meta charset="utf-8">
+		<!-- Configure a viewport meta tag in the head section that configures the width to
+		the device-width and sets the initial-scale to 1.0. (Chap 8) -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+	
+	<body>
+	
+		<script>
+			window.fbAsyncInit = function() {
+				FB.init({
+					appId      : '698670277184912',
+					cookie     : true,
+					xfbml      : true,
+					version    : 'v3.2'
+				});
+		  
+		
+				FB.getLoginStatus(function(response) {
+					statusChangeCallback(response);
+				});   
+		  
+			};
+
+			(function(d, s, id){
+				var js, fjs = d.getElementsByTagName(s)[0];
+				if (d.getElementById(id)) {return;}
+				js = d.createElement(s); js.id = id;
+				js.src = "https://connect.facebook.net/en_US/sdk.js";
+				fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));
+	   
+			function statusChangeCallback(response){
+				if(response.status === 'connected'){
+					consil.log('Logged in and authenticated');
+				} else {
+					consol.log('Not authenticated');
+				}
+			}
+		
+			function checkLoginState() {
+				FB.getLoginStatus(function(response) {
+					statusChangeCallback(response);
+				});
+			}
+		</script>
+	
+		<header>
+			<fb:login-button 
+				scope="public_profile,email"
+				autologoutlink="true"
+				onlogin="checkLoginState();">
+			</fb:login-button>
+			<h1>Connecting You With Your Future</h1>
+		</header>
+		
+		<nav>
+			<ul>
+				<a href="index.html">Home</a>
+				<a href="about.html">About Us</a>
+				<a href="contact.html">Contact Us</a>
+				<a href="faq.html">FAQ</a>
+			</ul>
+		</nav>
+		
+		<div id="wrapper">
+		
+			<div id="homehero">
+			</div>
+			
+			<main>
+				<p> Coming soon </p>
+			</main>
+			
+			<footer class="footer">
+				Bridger<br>
+				E-mail: <a href="mailto:MTQuinn@mail.fhsu.edu">Mike Quinn</a>
+			</footer>
+			
+		</div>
+	
+	</body>
+  
+</html>
