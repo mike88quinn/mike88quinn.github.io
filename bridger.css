@@ -70,7 +70,7 @@ nav   {
 	Style the unordered list. Configure the ul element selector with no list markers, zero margin, zero left padding, and 1.2em font size. (Chap 7 */
 nav ul {
 		margin: 0;
-		padding-left: 0;
+		padding-left: 50px;
 		font-size: 1em;
 		list-style-type: none;
 		list-style-image: none;
@@ -79,7 +79,7 @@ nav ul {
 /* The nav a element selector. Code styles to eliminate the display of the underline for hyperlinks
 (hint: use the nav a descendant selector with text-decoration: none; ) (Chap 5) */		
 nav a { 
-	  text-decoration: none; 
+		text-decoration: none; 
 		padding: 50px;
 	  }
 /* 	Style unvisited navigation hyperlinks. Configure the :link pseudo-class with medium blue text color (#5C7FA3).
