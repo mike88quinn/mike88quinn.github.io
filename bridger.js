@@ -1,3 +1,5 @@
+
+	<div id="fb-root"></div>
 <script>
 // This is called with the results from from FB.getLoginStatus().
   function statusChangeCallback(response) {
