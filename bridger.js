@@ -31,7 +31,7 @@ window.fbAsyncInit = function() {
 		cookie     : true,  // enable cookies to allow the server to access 
 												// the session
 		xfbml      : true,  // parse social plugins on this page
-		version    : 'v3.2' // use graph api version 3.2
+		version    : 'v2.8' // use graph api version 3.2
 	});
 	
 	// Now that we've initialized the JavaScript SDK, we call 
