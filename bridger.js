@@ -16,19 +16,6 @@ function statusChangeCallback(response) {
 	}
 }
 
-var person = { userID: "", name: "", email: "" };
-
-function logIn() {
-		FB.login(function(response) {
-			if (response.status == "connected") {
-				person.accessToken = response.authResponse.accessToken;
-				person.userID = response.authResponse.accessToken;
-				FB.api('/me', function (userData) {
-					console.log(userData);
-				});
-			}
-		}, {scope: 'public_profile, email'})
-}
 
 // This function is called when someone finishes with the Login
 // Button.  See the onlogin handler attached to it in the sample
@@ -65,6 +52,22 @@ window.fbAsyncInit = function() {
 	});
 
 };
+
+function js1()
+{
+   document.write("Hello from js1");
+}
+function status()
+{
+FB.getLoginStatus(function(response) {
+  if (response.status === 'connected') {
+    document.write("Logged in");
+  } else {
+    document.write("nope");
+  }
+ });
+}
+
 
 // Load the SDK asynchronously
 (function(d, s, id) {
