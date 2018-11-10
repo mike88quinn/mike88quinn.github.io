@@ -35,11 +35,9 @@ function statusChangeCallback(response) {
 	// Full docs on the response object can be found in the documentation
 	// for FB.getLoginStatus().
 	if (response.status === connected') {
-		document.write("worked 1");
 		// Logged into your app and Facebook.
 		testAPI();
 	} else {
-		document.write("worked 2");
 		// The person is not logged into your app or we are unable to tell.
 		document.getElementById('status').innerHTML = 'Please log ' +
 			'into this app.';
