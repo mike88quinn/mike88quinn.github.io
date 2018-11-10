@@ -35,9 +35,11 @@ function statusChangeCallback(response) {
 	
 		document.write("worked 0");
 	if (response.status === 'connected') {
+		document.write("worked 1");
 		// Logged into your app and Facebook.
 		testAPI();
 	} else {
+		document.write("worked 2");
 		// The person is not logged into your app or we are unable to tell.
 		document.getElementById('status').innerHTML = 'Please log ' +
 			'into this app.';
@@ -45,18 +47,7 @@ function statusChangeCallback(response) {
 }
 
 
-// This function is called when someone finishes with the Login
-// Button.  See the onlogin handler attached to it in the sample
-// code below.
-function checkLoginState(response) {
-	console.log('statusChangeCallback');
-	console.log(response);
-	if (response.status === 'connected') {
-		document.write("worked");
-	} else {
-		document.write("nopes");
-	}
-}
+
 
 function getName() {
 	print.name;
