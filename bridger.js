@@ -47,10 +47,7 @@ function statusChangeCallback(response) {
 // Button.  See the onlogin handler attached to it in the sample
 // code below.
 function checkLoginState() {
-	getLoginStatus(function(response) {
-		statusChangeCallback(response);
-		document.write(response.status);
-	});
+	document.write(response.status);
 }
 
 
