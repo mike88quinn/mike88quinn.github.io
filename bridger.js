@@ -47,7 +47,11 @@ function statusChangeCallback(response) {
 // Button.  See the onlogin handler attached to it in the sample
 // code below.
 function checkLoginState(response) {
-	document.write(response.status);
+	if (response.status === 'connected') {
+		document.write("worked");
+	} else {
+		document.write("nopes");
+	}
 }
 
 
