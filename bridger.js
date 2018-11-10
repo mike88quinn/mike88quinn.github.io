@@ -53,19 +53,14 @@ window.fbAsyncInit = function() {
 
 };
 
-function js1()
-{
-   document.write("Hello from js1");
-}
+
 function status()
 {
-FB.getLoginStatus(function(response) {
   if (response.status === 'connected') {
     document.write("Logged in");
   } else {
     document.write("nope");
   }
- });
 }
 
 
