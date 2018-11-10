@@ -58,7 +58,9 @@ function checkLoginState(response) {
 	}
 }
 
-
+function getName() {
+	print.name;
+}
 
 
 
