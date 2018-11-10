@@ -38,7 +38,10 @@
 
 				
 <script language="javascript">
-   checkLoginState();
+	checkLoginState();
+	FB.getLoginStatus(function(response) {
+		statusChangeCallback(response);
+	});
 </script>
 
 				<div class="fb-login-button" data-max-rows="1" data-size="small"
