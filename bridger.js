@@ -54,15 +54,6 @@ window.fbAsyncInit = function() {
 };
 
 
-function status()
-{
-  if (response.status === 'connected') {
-    document.write("Logged in");
-  } else {
-    document.write("nope");
-  }
-}
-
 
 // Load the SDK asynchronously
 (function(d, s, id) {
