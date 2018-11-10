@@ -49,10 +49,6 @@ function statusChangeCallback(response) {
 
 
 
-function getName() {
-	print.name;
-}
-
 
 
 // Load the SDK asynchronously
