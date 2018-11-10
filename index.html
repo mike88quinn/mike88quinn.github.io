@@ -38,9 +38,15 @@
 
 				
 <script language="javascript">
+	document.write("test");
 	checkLoginState();
 	FB.getLoginStatus(function(response) {
 		statusChangeCallback(response);
+		if(response.status === 'connected') {
+			document.write("logged in")
+		} else {
+			document.write("not logged in")
+		}
 	});
 </script>
 
