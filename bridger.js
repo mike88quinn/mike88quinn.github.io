@@ -33,7 +33,7 @@ function statusChangeCallback(response) {
 	// Full docs on the response object can be found in the documentation
 	// for FB.getLoginStatus().
 	
-		document.write("worked 0")
+		document.write("worked 0");
 	if (response.status === 'connected') {
 		// Logged into your app and Facebook.
 		testAPI();
@@ -52,9 +52,9 @@ function checkLoginState(response) {
 	console.log('statusChangeCallback');
 	console.log(response);
 	if (response.status === 'connected') {
-		document.write("worked")
+		document.write("worked");
 	} else {
-		document.write("nopes")
+		document.write("nopes");
 	}
 }
 
