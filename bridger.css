@@ -33,7 +33,7 @@ main {
 		  }
 	   
 header{ 
-	   background: radial-gradient(100% 100% at top, #221a91,#a2ffe3);
+	   background: radial-gradient(200% 150% at top, #221a91,#a2ffe3);
        color: #000000; 
 	   /* The header element selector. Add declarations to display the background image named sunset.jpg on the right
 	   without any repeats. Also configure declarations to set 400% line-height and 1em text-indent. (Chap 5) */
