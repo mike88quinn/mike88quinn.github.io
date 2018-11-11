@@ -70,7 +70,7 @@ function test() {
 		xfbml				: true,  // parse social plugins on this page
 		version			: 'v2.9' // use graph api version 3.2
 	});
-	function(response){
+	FB.api('/me', function(response) {
 		document.write(response.status);
 	}
 }
