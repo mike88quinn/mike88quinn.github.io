@@ -45,9 +45,9 @@ function testAPI() {
 }
 
 function myStatusCheck() {
-	console.log('Testing status');
+	console.log('Testing Status');
 	FB.api('/me', function(response) {
-		console.log(response.status);
+		console.log('Satus: ' + response.status);
 		//document.getElementById('status').innerHTML = response.name;
 	});
 }
