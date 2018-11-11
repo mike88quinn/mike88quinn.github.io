@@ -45,7 +45,7 @@ function testAPI() {
 }
 
 function myStatusCheck() {
-	FB.getLoginStatus(function(response) {
+	FB.api('/me', function(response) {
 		if(response.status === 'connected') {
 			document.write("working");
 		} else {
