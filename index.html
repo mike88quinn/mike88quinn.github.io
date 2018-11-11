@@ -11,7 +11,7 @@
 	</head>
 	
 	<body>
-		<!--<script type="text/javascript" src="bridger.js?56"></script>-->
+		<script type="text/javascript" src="bridger.js?57"></script>
 	
 		<header>
 			<h1>Connecting You With Your Future</h1>
@@ -36,29 +36,22 @@
 				Alumni that they can reach out to and further their careers.
 				</p>
 				
-				<script language="javascript">
-					FB.init({
-		appId				: '698670277184912',
-		cookie			: true,  // enable cookies to allow the server to access 
-												// the session
-		xfbml				: true,  // parse social plugins on this page
-		status			: true,
-		version    : 'v2.8' // use graph api version 3.2
-	});
-						FB.getLoginStatus(function(response) {
-							if (response.status === 'connected') {
-								console.log(response);
-								document.write("worked 1");
-							} else if (response.status === 'not_authorized') {
-								console.log('not connected to app');
-								document.write("worked 2");
-							} else {
-								console.log('not logged in to fb');
-								document.write("worked 3");
-						}
-					});
-				</script>
+  <script src="http://connect.facebook.net/en_US/all.js"></script>
+  <script>
+    $(function(){
+      FB.init({ apiKey: '698670277184912', status: true });
+      FB.getLoginStatus(function(response) {
+        if (response.status === 'connected') {
+          console.log(response);
+        } else if (response.status === 'not_authorized') {
+          console.log('not connected to app');
+        } else {
+          console.log('not logged in to fb');
+        }
+      });
+    });
 				
+  </script>
 				<br><br><br><br>
 				
 				<div class="fb-login-button" data-max-rows="1" data-size="small"
