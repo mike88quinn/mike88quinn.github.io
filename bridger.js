@@ -1,10 +1,10 @@
 window.fbAsyncInit = function() {
 	FB.init({
-		appId      : '698670277184912',
-		cookie     : true,  // enable cookies to allow the server to access 
+		appId				: '698670277184912',
+		cookie			: true,  // enable cookies to allow the server to access 
 												// the session
-		xfbml      : true,  // parse social plugins on this page
-		version    : 'v2.8' // use graph api version 3.2
+		xfbml				: true,  // parse social plugins on this page
+		version			: 'v2.9' // use graph api version 3.2
 	});
 	
 	// Now that we've initialized the JavaScript SDK, we call 
