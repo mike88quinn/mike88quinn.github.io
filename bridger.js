@@ -72,5 +72,5 @@ function test() {
 	});
 	FB.api('/me', function(response) {
 		document.write(response.status);
-	}
+	});
 }
