@@ -44,15 +44,6 @@ function testAPI() {
 	});
 }
 
-function message(response) {
-	console.log(response);
-	document.write(response.status);
-}
-
-function myStatusCheck() {
-	testAPI();
-}
-
 // This is called with the results from from FB.getLoginStatus().
 function statusChangeCallback(response) {
 	console.log('statusChangeCallback');
@@ -68,5 +59,18 @@ function statusChangeCallback(response) {
 		// The person is not logged into your app or we are unable to tell.
 		document.getElementById('status').innerHTML = 'Please log ' +
 			'into this app.';
+	}
+}
+
+function test() {
+	FB.init({
+		appId				: '698670277184912',
+		cookie			: true,  // enable cookies to allow the server to access 
+												// the session
+		xfbml				: true,  // parse social plugins on this page
+		version			: 'v2.9' // use graph api version 3.2
+	});
+	function(response){
+		document.write(response.status);
 	}
 }
