@@ -45,15 +45,18 @@ function testAPI() {
 }
 
 function myStatusCheck() {
-	FB.api('/me', function(response) {
-		if(response.status === 'connected') {
-			document.write("working");
-		} else {
-			document.write("not working");
-		}
+	FB.getLoginStatus(function(response) {
+		statusReturn(response);
 	});
 }
 
+function statusReturn(response) {
+	if(response.status === 'connected') {
+		document.write("working");
+	} else {
+		document.write("not working");
+	}
+}
 
 // This is called with the results from from FB.getLoginStatus().
 function statusChangeCallback(response) {
