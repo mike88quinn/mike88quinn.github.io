@@ -44,14 +44,14 @@ function testAPI() {
 	});
 }
 
-
-
 function myStatusCheck(response) {
-	if(response.status === 'connected') {
-		document.write("working");
-	} else {
-		document.write("not working");
-	}
+	FB.getLoginStatus(function(response) {
+		if(response.status === 'connected') {
+			document.write("working");
+		} else {
+			document.write("not working");
+		}
+	};
 }
 
 
@@ -59,6 +59,11 @@ function myStatusCheck(response) {
 function statusChangeCallback(response) {
 	console.log('statusChangeCallback');
 	console.log(response);
+	if(response.status === 'connected') {
+		document.write("boom");
+	} else {
+		document.write("no boom");
+	}
 	// The response object is returned with a status field that lets the
 	// app know the current login status of the person.
 	// Full docs on the response object can be found in the documentation
