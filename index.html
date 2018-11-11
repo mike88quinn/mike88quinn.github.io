@@ -37,7 +37,19 @@
 				</p>
 				
 				<script language="javascript">
-					checkLoginState();
+					FB.init({ apiKey: '698670277184912', status: true });
+					FB.getLoginStatus(function(response) {
+						if (response.status === 'connected') {
+							console.log(response);
+							document.write("worked 1");
+						} else if (response.status === 'not_authorized') {
+							console.log('not connected to app');
+							document.write("worked 2");
+						} else {
+							console.log('not logged in to fb');
+							document.write("worked 3");
+					}
+					});
 				</script>
 				
 				<br><br><br><br>
