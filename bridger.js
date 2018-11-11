@@ -45,8 +45,10 @@ function testAPI() {
 }
 
 function myStatusCheck() {
-	FB.getLoginStatus(function(response) {
-		statusReturn(response);
+	console.log('Testing status');
+	FB.api('/me', function(response) {
+		console.log(response.status);
+		//document.getElementById('status').innerHTML = response.name;
 	});
 }
 
