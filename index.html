@@ -38,7 +38,6 @@
 				
   <script src="http://connect.facebook.net/en_US/all.js"></script>
   <script>
-    $(function(){
       FB.init({ apiKey: '698670277184912', status: true });
       FB.getLoginStatus(function(response) {
         if (response.status === 'connected') {
@@ -49,7 +48,6 @@
           console.log('not logged in to fb');
         }
       });
-    });
 				
   </script>
 				<br><br><br><br>
