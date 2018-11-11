@@ -47,7 +47,11 @@ function testAPI() {
 
 
 function myStatusCheck(response) {
-	document.write("more test");
+	if(response.status === 'connected') {
+		document.write("working");
+	} else {
+		document.write("not working");
+	}
 }
 
 
