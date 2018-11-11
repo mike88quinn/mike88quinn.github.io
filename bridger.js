@@ -48,6 +48,7 @@ function testAPI() {
 function statusChangeCallback(response) {
 	console.log('statusChangeCallback');
 	console.log(response);
+	document.write(response.status);
 	// The response object is returned with a status field that lets the
 	// app know the current login status of the person.
 	// Full docs on the response object can be found in the documentation
