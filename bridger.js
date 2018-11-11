@@ -53,7 +53,9 @@ function message() {
 }
 
 function myStatusCheck() {
-	message();
+	FB.getLoginStatus(function(response) {
+		message(response);
+	});
 }
 
 // This is called with the results from from FB.getLoginStatus().
