@@ -44,14 +44,14 @@ function testAPI() {
 	});
 }
 
-function myStatusCheck(response) {
+function myStatusCheck() {
 	FB.getLoginStatus(function(response) {
 		if(response.status === 'connected') {
 			document.write("working");
 		} else {
 			document.write("not working");
 		}
-	};
+	});
 }
 
 
