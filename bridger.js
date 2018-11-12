@@ -41,10 +41,12 @@ window.fbAsyncInit = function() {
 			// login dialog with a user gesture, but the user may have
 			// to log in to Facebook before authorizing your application.
 			if(window.location.href.indexOf("auth") > -1) {
-				window.location.href = "https://mike88quinn.github.io/";
+				window.location.href = "https://mike88quinn.github.io";
 			}
 		}
  });
+ 
+ FB.Event.subscribe("auth.logout", function() {window.location.href = 'https://mike88quinn.github.io'});
 };
 
 // Load the SDK asynchronously
