@@ -83,3 +83,12 @@ function statusChangeCallback(response) {
 			'into this app.';
 	}
 }
+
+// This function is called when someone finishes with the Login
+  // Button.  See the onlogin handler attached to it in the sample
+  // code below.
+  function checkLoginState() {
+    FB.getLoginStatus(function(response) {
+      statusChangeCallback(response);
+    });
+  }
