@@ -22,6 +22,7 @@ window.fbAsyncInit = function() {
 	
 	
 	FB.getLoginStatus(function(response) {
+		statusChangeCallback(response)
 		if (response.status === 'connected') {
 			// The user is logged in and has authenticated your
 			// app, and response.authResponse supplies
