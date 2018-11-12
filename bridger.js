@@ -29,14 +29,18 @@ window.fbAsyncInit = function() {
 			// the user's ID, a valid access token, a signed
 			// request, and the time the access token 
 			// and signed request each expire.
-			window.location.href = "https://mike88quinn.github.io/home.html";
+			if(window.location.href.indexOf("Auth") > -1) {
+				console.log('Authorized location');
+			}
 			var uid = response.authResponse.userID;
 			var accessToken = response.authResponse.accessToken;
 		} else {
 			// The user isn't logged in to Facebook. You can launch a
 			// login dialog with a user gesture, but the user may have
 			// to log in to Facebook before authorizing your application.
-			window.location.href = "https://mike88quinn.github.io/";
+			if(window.location.href.indexOf("Auth") > -1) {
+				window.location.href = "https://mike88quinn.github.io/";
+			}
 		}
  });
 };
