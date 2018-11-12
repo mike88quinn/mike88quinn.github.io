@@ -29,9 +29,8 @@ window.fbAsyncInit = function() {
 			// the user's ID, a valid access token, a signed
 			// request, and the time the access token 
 			// and signed request each expire.
-			if(window.location.href.indexOf("Auth") > -1) {
-				console.log('Authorized location');
-			}
+				window.location.href = "https://mike88quinn.github.io/home.html";
+			
 			var uid = response.authResponse.userID;
 			var accessToken = response.authResponse.accessToken;
 		} else {
