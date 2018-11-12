@@ -40,7 +40,7 @@ window.fbAsyncInit = function() {
 			// The user isn't logged in to Facebook. You can launch a
 			// login dialog with a user gesture, but the user may have
 			// to log in to Facebook before authorizing your application.
-			if(window.location.href.indexOf("Auth") > -1) {
+			if(window.location.href.indexOf("auth") > -1) {
 				window.location.href = "https://mike88quinn.github.io/";
 			}
 		}
