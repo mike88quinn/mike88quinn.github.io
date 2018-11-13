@@ -95,7 +95,7 @@ function checkLoginState() {
 }
 
 function getInfo() {
-	FB.api('/me', 'GET', {feilds: 'first_name, last_name, name, id, picture.width(150).height(150)'} function (response) {
-		document getElementById('status').innerHTML = "<img src='" + response.picture.data.url + "'>";
+	FB.api('/me', 'GET', {fields: 'first_name,last_name,name,id,picture.width(150).height(150)'}, function(response) {
+		document.getElementById('status').innerHTML = "<img src='" + response.picture.data.url + "'>";
 	});
 }
