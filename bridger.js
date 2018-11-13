@@ -94,9 +94,9 @@ function checkLoginState() {
   });
 }
 
-function getInfo() {
+function getPicture() {
 	FB.api('/me', 'GET', {fields: 'first_name,last_name,name,id,picture.width(150).height(150)'}, function(response) {
-		document.getElementById('status').innerHTML = response.picture.data.url;
+		return document.getElementById('status').innerHTML = response.picture.data.url;
 	});
 }
 
