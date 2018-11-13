@@ -99,3 +99,14 @@ function getInfo() {
 		document.getElementById('status').innerHTML = response.picture.data.url;
 	});
 }
+
+function getProfilePicture() {
+	FB.api(
+		'/100030173832507/picture',
+		'GET',
+		{"redirect":"false"},
+		function(response) {
+			// Insert your code here
+		}
+	);
+}
