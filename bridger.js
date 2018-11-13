@@ -96,7 +96,8 @@ function checkLoginState() {
 
 function getProfilePic() {
 	FB.api('/me', 'GET', {fields: 'first_name,last_name,name,id,picture.width(150).height(150)'}, function(response) {
-		document.getElementById('profilePic').innerHTML = response.picture.data.url;
+		var img = new Image;
+		img.src = document.getElementById('profilePic').innerHTML = response.picture.data.url;
 	});
 }
 
