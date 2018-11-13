@@ -11,6 +11,10 @@
 	</head>
 	
 	<body>
+		<script type="text/javascript" src="bridger.js?01">
+			var img = new Image;
+			img.src = getInfo();
+		</script>
 	
 		<header>
 			<h1>Connecting You With Your Future</h1>
@@ -33,7 +37,8 @@
 			<main>
 				<p> Coming soon </p>
 
-				<img onload="getInfo()">
+				<input type="image" id="profilePic" alt="profilePic"
+       src=img.src>
 				
 			</main>
 			
