@@ -102,11 +102,11 @@ function getInfo() {
 
 function getProfilePicture() {
 	FB.api(
-		'/100030173832507/picture',
-		'GET',
-		{"redirect":"false"},
-		function(response) {
-			// Insert your code here
-		}
-	);
+  '/100030173832507/picture',
+  'GET',
+  {"redirect":"false"},
+  function(response) {
+      // Insert your code here
+  }
+);
 }
