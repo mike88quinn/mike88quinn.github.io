@@ -250,6 +250,14 @@ td	{
 	text-align: center;
 	}
 	
+label {
+	float: left;
+	display: block;
+	text-align: right;
+	width: 120px;
+	padding-right: 10px;
+}
+	
 /* Configure the text class. Notice that the content in the table data cells that contain the text description
 is not centered. Code a new style rule for a class named text that will override the td style rule and left-align
 the text. (Chap 9) */
