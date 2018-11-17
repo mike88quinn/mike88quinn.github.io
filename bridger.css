@@ -107,6 +107,29 @@ h2   {
 	  /* The h2 element Selector. Add a style declaration to configure 1px offset gray (#CCCCCC) text shadow. (Chap 6) */
 	  text-shadow: 1px 1px 1px #CCCCCC;
 	  }
+	
+label {
+	float: left;
+	display: block;
+	text-align: right;
+	width: 120px;
+	padding-right: 10px;
+}
+		  
+/* Configure the input element and textarea element selectors. Set block display and 20 pixels of bottom margin. (Chap 10) */
+input {
+	display: block;
+	margin-bottom: 20px;
+	margin-top: 20px;
+}
+	
+textarea {
+	display: block;
+	margin-bottom: 20px;
+}
+	
+/* Configure the submit button with a 130px left margin. (Chap 10) */
+input[type="submit"] { margin-left: 130px; }
 	   
 h3   { 
 	  /* The h3 element selector. Code styles to display text in Georgia, Times New Roman, or serif font typeface.
@@ -249,14 +272,6 @@ td, th {
 td	{
 	text-align: center;
 	}
-	
-label {
-	float: left;
-	display: block;
-	text-align: right;
-	width: 120px;
-	padding-right: 10px;
-}
 	
 /* Configure the text class. Notice that the content in the table data cells that contain the text description
 is not centered. Code a new style rule for a class named text that will override the td style rule and left-align
