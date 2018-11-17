@@ -44,10 +44,19 @@ window.fbAsyncInit = function() {
 				window.location.href = "https://mike88quinn.github.io";
 			}
 		}
- });
+	});
  
- FB.Event.subscribe("auth.logout", function() {window.location.href = 'https://mike88quinn.github.io'});
- FB.Event.subscribe("auth.login", function() {window.location.href = 'https://mike88quinn.github.io/authHome.html'});
+	FB.api(
+		'/100030332079828/picture',
+		'GET',
+		{"redirect":"false"},
+		function(response) {
+				// Insert your code here
+		}
+	);
+ 
+	FB.Event.subscribe("auth.logout", function() {window.location.href = 'https://mike88quinn.github.io'});
+	FB.Event.subscribe("auth.login", function() {window.location.href = 'https://mike88quinn.github.io/authHome.html'});
 };
 
 // Load the SDK asynchronously
@@ -94,18 +103,25 @@ function checkLoginState() {
   });
 }
 
-function getProfilePic() {
-	FB.api('/me', 'GET', {fields: 'first_name,last_name,name,id,picture.width(150).height(150)'}, function(response) {
-		document.getElementById('profilePic').innerHTML = response.picture.data.url;
-	});
-}
-
-// getting basic user info
-function getInfo() {
-	FB.api('/me', 'GET', {fields: 'first_name,last_name,name,id,picture.width(150).height(150)'}, function(response) {
-		document.getElementById('status').innerHTML = "<img src='" + response.picture.data.url + "'>";
-	});
-}
+// login with facebook with extra permissions
+		function login() {
+			FB.login(function(response) {
+				if (response.status === 'connected') {
+		    		document.getElementById('status').innerHTML = 'We are connected.';
+		    		document.getElementById('login').style.visibility = 'hidden';
+		    	} else if (response.status === 'not_authorized') {
+		    		document.getElementById('status').innerHTML = 'We are not logged in.'
+		    	} else {
+		    		document.getElementById('status').innerHTML = 'You are not logged into Facebook.';
+		    	}
+			}, {scope: 'email'});
+		}
+		
+		// getting basic user info
+		function getInfo() {
+			FB.api('/me', 'GET', {fields: 'first_name,last_name,name,id,picture.width(150).height(150)'}, function(response) {
+				document.getElementById('status').innerHTML = "<img src='" + response.picture.data.url + "'>";
+			});
 
 function getProfilePicture() {
 	FB.api(
