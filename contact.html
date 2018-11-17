@@ -29,7 +29,23 @@
 		<div id="wrapper">
 			
 			<main>
-				<p> Coming soon </p>
+			
+				<form method="GET" action="mailto:test@example.com" enctype="text/plain">
+					<label for="myFName">*First Name:</label>
+					<input type="text" name="myFName" id="myFName" required="required">
+					
+					<label for="myLName">*Last Name:</label>
+					<input type="text" name="myLName" id="myLName" required="required">
+					
+					<label for="myEmail">*E-mail:</label>
+					<input type="email" name="myEmail" id="myEmail" size="30" required="required">
+					
+					<label for="myComments">*Comments and Suggestions:</label>
+					<textarea name="myComments" id="myComments" rows="2" cols="30" required="required"></textarea>
+					
+					<input type="submit" value="Send">
+				</form>
+				
 			</main>
 			
 			<footer class="footer">
