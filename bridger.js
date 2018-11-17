@@ -49,15 +49,6 @@ window.fbAsyncInit = function() {
 		}
 	});
  
-	FB.api(
-		'/100030332079828/picture',
-		'GET',
-		{"redirect":"false"},
-		function(response) {
-				// Insert your code here
-		}
-	);
- 
 	FB.Event.subscribe("auth.logout", function() {window.location.href = 'https://mike88quinn.github.io'});
 	FB.Event.subscribe("auth.login", function() {window.location.href = 'https://mike88quinn.github.io/authHome.html'});
 };
