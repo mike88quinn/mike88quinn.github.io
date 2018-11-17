@@ -30,6 +30,9 @@ window.fbAsyncInit = function() {
 			// request, and the time the access token 
 			// and signed request each expire.
 			if(window.location.href.indexOf("auth") > -1) {
+				if(window.location.href.indexOf("authProfile") > -1) {
+					document.getElementById('status').innerHTML = "<img src='" + response.picture.data.url + "'>";
+				}
 				console.log('Authorized Location');
 			} else {
 				window.location.href = "https://mike88quinn.github.io/authHome.html";
