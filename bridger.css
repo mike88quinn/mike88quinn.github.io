@@ -236,14 +236,14 @@ solid blue border (#3399CC) and no cellspacing (use border-collapse: collapse;).
 table { 
 	border: 2px solid #3399CC;
 	border-collapse: collapse;
-	}
+}
 	
 /* Configure the table cells. Code a new style rule for the td and th element selectors that sets padding to 0.5em and
 configures a 2 pixel solid blue border (#3399CC). (Chap 9) */
 td, th {
 	border: 2px solid #3399CC;
 	padding: 0.5em;
-	}
+}
 	
 /* Center the td content. Code a new style rule for the td element selector that centers text. (Chap 9) */
 td	{
