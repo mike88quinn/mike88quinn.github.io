@@ -351,7 +351,7 @@ tr:nth-of-type(odd) { background-color: #F5FAFC; }
 		padding-top: 0.5em;
 		padding-bottom: 0.5em;
 		padding-left: 0;
-		height: auto;
+		height: 120px;
 	}
 	/* The h1 element selector. Set letter-spacing to 0.1em. (Chap 8) */
 	h1 {
@@ -414,8 +414,16 @@ tr:nth-of-type(odd) { background-color: #F5FAFC; }
 	}
 	/* The h1 element selector. Set font size to 2em. (Chap 8) */
 	h1 {
-		font-size: 2em;
+		letter-spacing: 0.1em;
 	}
+	
+	header {
+		padding-top: 0.5em;
+		padding-bottom: 0.5em;
+		padding-left: 0;
+		height: 120px;
+	}
+	
 	/* The nav element selector. Set padding to 0. (Chap 8) */
 	nav {
 		padding: 0;
