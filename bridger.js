@@ -31,7 +31,14 @@ window.fbAsyncInit = function() {
 			// and signed request each expire.
 			if(window.location.href.indexOf("auth") > -1) {
 				if(window.location.href.indexOf("authProfile") > -1) {
-					document.getElementById('status').innerHTML = "<img src='" + response.picture.data.url + "'>";
+					FB.api(
+						'/100030492783650/picture',
+						'GET',
+						{"redirect":"false"},
+						function(response) {
+							document.getElementById('status').innerHTML = "<img src='" + response.picture.data.url + "'>";
+						}
+					);
 				}
 				console.log('Authorized Location');
 			} else {

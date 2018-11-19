@@ -142,6 +142,51 @@ h3   {
 ul   {
 	  list-style-image: url(marker.gif); 
 	  }
+		
+#gallery {
+	position: relative;
+	height: 440px;
+}
+
+#gallery ul {
+	list-style-type: none;
+	width: 300px; 
+}
+
+#gallery li { 
+	display: inline; 
+	float: left;
+	padding: 10px; 
+}
+#gallery img { 
+	border-style: none;
+}
+
+#gallery a { 
+	text-decoration: none;
+	font-style: italic;  
+	color: #000000; 
+}
+
+#gallery span { 
+	position: absolute;
+	left: -1000px;
+	opacity: 0;
+	transition:  opacity 1s ease-in-out; 
+}
+#gallery a:hover span {     
+	position: absolute;
+	top: 16px;
+	left: 320px; 
+	text-align: center; 
+	opacity: 1; 
+}
+figure {
+	position: absolute;
+	left: 280px;
+	text-align: center; 
+	opacity: .5;
+}
 
 /* Configure the unordered list in the main content area. Replace the ul element selector with a descendant selector (main ul)
 to specify only ul elements within the main content. (Chap 7) */
