@@ -330,6 +330,19 @@ colors but is still readable without them. Apply the :nth-of-type CSS3 pseudo-cl
 with a light blue background color (#F5FAFC). (Chap 9) */
 tr:nth-of-type(odd) { background-color: #F5FAFC; }
 		  
+/* Always set the map height explicitly to define the size of the div
+ * element that contains the map. */
+#map {
+  height: 100%;
+}
+/* Optional: Makes the sample page fill the window. */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+			
+			
 /* Code a media query below the existing styles to select for typical tablet device viewport size. (Chap 8) */
 @media only screen and (max-width: 64em) {
 	/* The body element selector. Set margin to 0 and the background color to #FFFFFF;. (Chap 8) */
