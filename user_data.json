@@ -1,10 +1,10 @@
 {
-  "users": [
-    {
-			"id": "1",
-      "first_name": "Michael",
-			"last_name": "Quinn",
-      "coordinates": [40.246667,-80.042778],
-    }
-  ]
+  "type": "Feature",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [40.246667,-80.042778]
+  },
+  "properties": {
+    "name": "Michael Quinn"
+  }
 }
