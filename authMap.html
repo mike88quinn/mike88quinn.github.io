@@ -40,12 +40,12 @@
 					var map;
 					function initMap() {
 						map = new google.maps.Map(document.getElementById('map'), {
-							zoom: 8,
+							zoom: 12,
 							center: new google.maps.LatLng(40.246667,-80.042778),
 						});
 		
 						// NOTE: This uses cross-domain XHR, and may not work on older browsers.
-						map.data.loadGeoJson('user_data.json?02');
+						map.data.loadGeoJson('user_data.json?03');
 					}
 				</script>
 				<script async defer
