@@ -302,6 +302,7 @@ and to display the trail.jpg background image to fill the space (use background-
 /* Configure the table. Code a new style rule for the table element selector that configures a table with a 2 pixel
 solid blue border (#3399CC) and no cellspacing (use border-collapse: collapse;). (Chap 9) */
 table { 
+	margin: auto;
 	border: 2px solid #3399CC;
 	border-collapse: collapse;
 }
