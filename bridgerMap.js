@@ -16,7 +16,6 @@ function initMap() {
 	map.data.addListener('click', function(event) {
 		document.getElementById('info-box').textContent =
 			"test";
-		});
 	});
 	
   // Try HTML5 geolocation.
