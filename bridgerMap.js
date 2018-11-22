@@ -14,9 +14,8 @@ function initMap() {
 	map.data.loadGeoJson('user_data.json?12');
 	
 	map.data.addListener('click', function(event) {
-		var contentString  = event.feature.getProperty("Description");
-		var infowindow = new google.maps.InfoWindow({
-			content: contentString
+		document.getElementById('info-box').textContent =
+      event.feature.getProperty('name');
 		});
 	});
 	
