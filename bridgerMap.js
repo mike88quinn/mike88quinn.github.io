@@ -25,10 +25,6 @@ function initMap() {
 				position: pos,
 				title:"Hello World!"
 			});
-
-      infoWindow.setPosition(pos);
-      infoWindow.setContent('Location found.');
-      infoWindow.open(map);
       map.setCenter(pos);
     }, function() {
       handleLocationError(true, infoWindow, map.getCenter());
