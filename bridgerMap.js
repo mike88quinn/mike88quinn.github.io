@@ -15,7 +15,7 @@ function initMap() {
 	
 	map.data.addListener('click', function(event) {
 		document.getElementById('info-box').textContent =
-			google.maps.Data.Feature('name');
+			google.maps.Data.Feature('properties');
 		});
 	});
 	
