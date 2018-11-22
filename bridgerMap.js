@@ -21,7 +21,7 @@ function initMap() {
         lng: position.coords.longitude
       };
 			
-			new marker = new google.maps.Marker({
+			var marker = new google.maps.Marker({
 				position: pos,
 				title:"Hello World!"
 			});
