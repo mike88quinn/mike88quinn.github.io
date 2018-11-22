@@ -13,6 +13,7 @@ function initMap() {
 	// NOTE: This uses cross-domain XHR, and may not work on older browsers.
 	map.data.loadGeoJson('user_data.json?12');
 	
+	var marker;
 	
 	google.maps.event.addListener(marker, 'click', function() {
 		infowindow.open(map, marker);
@@ -25,10 +26,11 @@ function initMap() {
         lat: position.coords.latitude,
         lng: position.coords.longitude
       };
-
-      infoWindow.setPosition(pos);
-      infoWindow.setContent('Location found.');
-      infoWindow.open(map);
+			
+			marker = new google.maps.Marker({
+				position: pos,
+				title:"Your location!"
+			});
       map.setCenter(pos);
     }, function() {
       handleLocationError(true, infoWindow, map.getCenter());
