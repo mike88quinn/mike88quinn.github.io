@@ -12,6 +12,7 @@
 	</head>
   <body>
 		<script type="text/javascript" src="bridger.js?01"></script>
+		<script type="text/javascript" src="bridgerMap.js?01"></script>
 		
 		<header>
 			<h1>Connecting You With Your Future</h1>
@@ -29,25 +30,14 @@
 			</ul>
 		</nav>
 		
-		<div id="map">
-		</div>
 			
 			
 		<div id="wrapper">
 			<main>
-				<script>
+				
+				<div id="map">
+				</div>
 
-					var map;
-					function initMap() {
-						map = new google.maps.Map(document.getElementById('map'), {
-							zoom: 12,
-							center: new google.maps.LatLng(40.246667,-80.042778),
-						});
-		
-						// NOTE: This uses cross-domain XHR, and may not work on older browsers.
-						map.data.loadGeoJson('user_data.json?10');
-					}
-				</script>
 				<script async defer
 				src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCaJVhE7BHHhkiYwaXVuCwuVeVk7SQjcg0&callback=initMap">
 				</script>
