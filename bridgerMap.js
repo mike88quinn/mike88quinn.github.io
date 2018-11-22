@@ -11,13 +11,15 @@ function initMap() {
   infoWindow = new google.maps.InfoWindow;
 	
 	// NOTE: This uses cross-domain XHR, and may not work on older browsers.
-	map.data.loadGeoJson('user_data.json?10');
+	map.data.loadGeoJson('user_data.json?11');
 	
-  var contentString  = event.feature.getProperty("Description");
-  var infowindow = new google.maps.InfoWindow({
-		content: contentString
-  });
-
+	map.data.addListener('click', function(event) {
+		var contentString  = event.feature.getProperty("Description");
+		var infowindow = new google.maps.InfoWindow({
+			content: contentString
+		});
+	});
+	
   // Try HTML5 geolocation.
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function(position) {

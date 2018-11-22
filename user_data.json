@@ -6,6 +6,7 @@
       "type": "Feature",
       "id": 0,
       "Description": "Michael Quinn",
+      "title": 'Uluru (Ayers Rock)'
       "geometry": {
         "type": "Point",
         "coordinates": [
