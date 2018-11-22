@@ -13,10 +13,10 @@ function initMap() {
 	// NOTE: This uses cross-domain XHR, and may not work on older browsers.
 	map.data.loadGeoJson('user_data.json?12');
 	
-	map.data.addListener('click', function(event) {
-		document.getElementById('info-box').textContent =
-			"test";
-	});
+	
+	google.maps.event.addListener(marker, 'click', function() {
+		infowindow.open(map, marker);
+  });
 	
   // Try HTML5 geolocation.
   if (navigator.geolocation) {
