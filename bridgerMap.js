@@ -14,7 +14,7 @@ function initMap() {
 	map.data.loadGeoJson('user_data.json?10');
 	
 	map.data.addListener('click', function(event) {
-      var myHTML = event.feature.getProperty("name");
+      var myHTML = event.feature.getProperty("Description");
       infowindow.setContent("<div style='width:150px; text-align: center;'>"+myHTML+"</div>");
       infowindow.setPosition(event.feature.getGeometry().get());
       infowindow.setOptions({pixelOffset: new google.maps.Size(0,-30)});
