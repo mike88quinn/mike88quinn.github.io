@@ -1,5 +1,3 @@
-
-
 // Note: This example requires that you consent to location sharing when
 // prompted by your browser. If you see the error "The Geolocation service
 // failed.", it means you probably did not give permission for the browser to
@@ -11,6 +9,9 @@ function initMap() {
     zoom: 12,
   });
   infoWindow = new google.maps.InfoWindow;
+	
+	// NOTE: This uses cross-domain XHR, and may not work on older browsers.
+	map.data.loadGeoJson('user_data.json?10');
 
   // Try HTML5 geolocation.
   if (navigator.geolocation) {
