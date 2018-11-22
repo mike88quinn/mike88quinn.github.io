@@ -11,7 +11,7 @@ function initMap() {
   infoWindow = new google.maps.InfoWindow;
 	
 	// NOTE: This uses cross-domain XHR, and may not work on older browsers.
-	map.data.loadGeoJson('user_data.json?11');
+	map.data.loadGeoJson('user_data.json?12');
 	
 	map.data.addListener('click', function(event) {
 		var contentString  = event.feature.getProperty("Description");
