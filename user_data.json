@@ -4,14 +4,11 @@
     {
       "type": "Feature",
       "properties": {
-        "letter": "G",
-        "color": "blue",
-        "rank": "7",
-        "ascii": "71"
+				"name": "Michael Quinn"
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [40.246667,-80.042778]
+        "coordinates": [40.2,-80.0]
       }
     }
   ]
