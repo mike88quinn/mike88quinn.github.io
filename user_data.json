@@ -5,8 +5,11 @@
     {
       "type": "Feature",
       "id": 0,
-      "Description": "Michael Quinn",
-      "title": "Uluru (Ayers Rock)",
+      "properties": {
+				"name": "Michael Quinn",
+				"title": "tMichael Quinn",
+				"Description": "dMichael Quinn"
+			},
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -18,7 +21,11 @@
     {
       "type": "Feature",
       "id": 1,
-      "Description": "Molly Quinn",
+      "properties": {
+				"name": "Molly Quinn",
+				"title": "tMolly Quinn",
+				"Description": "dMolly Quinn"
+			},
       "geometry": {
         "type": "Point",
         "coordinates": [
