@@ -13,13 +13,10 @@ function initMap() {
 	// NOTE: This uses cross-domain XHR, and may not work on older browsers.
 	map.data.loadGeoJson('user_data.json?10');
 	
-	map.data.addListener('click', function(event) {
-      var myHTML = event.feature.getProperty("Description");
-      infowindow.setContent("<div style='width:150px; text-align: center;'>"+myHTML+"</div>");
-      infowindow.setPosition(event.feature.getGeometry().get());
-      infowindow.setOptions({pixelOffset: new google.maps.Size(0,-30)});
-      infowindow.open(map);
-  });  
+  var contentString  = event.feature.getProperty("Description");
+  var infowindow = new google.maps.InfoWindow({
+		content: contentString
+  });
 
   // Try HTML5 geolocation.
   if (navigator.geolocation) {
