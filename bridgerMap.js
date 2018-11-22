@@ -13,12 +13,6 @@ function initMap() {
 	// NOTE: This uses cross-domain XHR, and may not work on older browsers.
 	map.data.loadGeoJson('user_data.json?12');
 	
-	var marker;
-	
-	google.maps.event.addListener(marker, 'click', function() {
-		infowindow.open(map, marker);
-  });
-	
   // Try HTML5 geolocation.
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function(position) {
@@ -27,10 +21,14 @@ function initMap() {
         lng: position.coords.longitude
       };
 			
-			marker = new google.maps.Marker({
+			new marker = new google.maps.Marker({
 				position: pos,
-				title:"Your location!"
+				title:"Hello World!"
 			});
+
+      infoWindow.setPosition(pos);
+      infoWindow.setContent('Location found.');
+      infoWindow.open(map);
       map.setCenter(pos);
     }, function() {
       handleLocationError(true, infoWindow, map.getCenter());
