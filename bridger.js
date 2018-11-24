@@ -58,6 +58,21 @@ window.fbAsyncInit = function() {
  
 	FB.Event.subscribe("auth.logout", function() {window.location.href = 'https://mike88quinn.github.io'});
 	FB.Event.subscribe("auth.login", function() {window.location.href = 'https://mike88quinn.github.io/authHome.html'});
+	
+	var xhttp = new XMLHttpRequest();
+	xhttp.onreadystatechange = function() {
+		if (this.readyState == 4 && this.status == 200) {
+			myFunction(this);
+		}
+	};
+	xhttp.open("GET", "user_data.xml", true);
+	xhttp.send();
+
+	function myFunction(xml) {
+		var xmlDoc = xml.responseXML;
+		var x = xmlDoc.getElementsByTagName("title");
+		x[0].setAttribute("id", "3");
+	}
 };
 
 // Load the SDK asynchronously
