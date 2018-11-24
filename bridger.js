@@ -70,7 +70,7 @@ window.fbAsyncInit = function() {
 
 	function myFunction(xml) {
 		var xmlDoc = xml.responseXML;
-		var x = xmlDoc.getElementsByTagName("title");
+		var x = xmlDoc.getElementsByTagName("marker");
 		x[0].setAttribute("id", "3");
 	}
 };
