@@ -16,7 +16,7 @@ function initMap() {
   var infoWindow = new google.maps.InfoWindow;
 
 	// Change this depending on the name of your PHP or XML file
-	downloadUrl('mapmarkers2.xml?01', function(data) {
+	downloadUrl('user_data.xml', function(data) {
 		var xml = data.responseXML;
 		var markers = xml.documentElement.getElementsByTagName('marker');
 		Array.prototype.forEach.call(markers, function(markerElem) {
