@@ -1,17 +1,56 @@
-// Note: This example requires that you consent to location sharing when
-// prompted by your browser. If you see the error "The Geolocation service
-// failed.", it means you probably did not give permission for the browser to
-// locate you.
+var customLabel = {
+	restaurant: {
+		label: 'R'
+	},
+	bar: {
+		label: 'B'
+	}
+};
+
 var map, infoWindow;
 function initMap() {
   map = new google.maps.Map(document.getElementById('map'), {
     center: {lat: -34.397, lng: 150.644},
     zoom: 12,
   });
-  infoWindow = new google.maps.InfoWindow;
+  var infoWindow = new google.maps.InfoWindow;
+
+	// Change this depending on the name of your PHP or XML file
+	downloadUrl('mapmarkers2.xml?01', function(data) {
+		var xml = data.responseXML;
+		var markers = xml.documentElement.getElementsByTagName('marker');
+		Array.prototype.forEach.call(markers, function(markerElem) {
+			var id = markerElem.getAttribute('id');
+			var name = markerElem.getAttribute('name');
+			var address = markerElem.getAttribute('address');
+			var type = markerElem.getAttribute('type');
+			var point = new google.maps.LatLng(
+					parseFloat(markerElem.getAttribute('lat')),
+					parseFloat(markerElem.getAttribute('lng')));
 	
-	// NOTE: This uses cross-domain XHR, and may not work on older browsers.
-	map.data.loadGeoJson('user_data.json?12');
+			var infowincontent = document.createElement('div');
+			var strong = document.createElement('strong');
+			strong.textContent = name
+			infowincontent.appendChild(strong);
+			infowincontent.appendChild(document.createElement('br'));
+	
+			var text = document.createElement('text');
+			text.textContent = address
+			infowincontent.appendChild(text);
+			var icon = customLabel[type] || {};
+			var marker = new google.maps.Marker({
+				map: map,
+				position: point,
+				label: icon.label
+			});
+			marker.addListener('click', function() {
+				infoWindow.setContent(infowincontent);
+				infoWindow.open(map, marker);
+			});
+		});
+	});
+	
+	infoWindow = new google.maps.InfoWindow;
 	
   // Try HTML5 geolocation.
   if (navigator.geolocation) {
@@ -20,11 +59,6 @@ function initMap() {
         lat: position.coords.latitude,
         lng: position.coords.longitude
       };
-			
-			var marker = new google.maps.Marker({
-				position: pos,
-				title:"Hello World!"
-			});
       map.setCenter(pos);
     }, function() {
       handleLocationError(true, infoWindow, map.getCenter());
@@ -42,3 +76,21 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
                         'Error: Your browser doesn\'t support geolocation.');
   infoWindow.open(map);
 }
+
+function downloadUrl(url, callback) {
+  var request = window.ActiveXObject ?
+		new ActiveXObject('Microsoft.XMLHTTP') :
+		new XMLHttpRequest;
+
+  request.onreadystatechange = function() {
+		if (request.readyState == 4) {
+			request.onreadystatechange = doNothing;
+			callback(request, request.status);
+		}
+	};
+
+	request.open('GET', url, true);
+	request.send(null);
+}
+
+function doNothing() {}
