@@ -119,10 +119,6 @@ main ul {
 	font-weight: bold;
 }
 
-.login {
-	float: left;
-	margin: 0 0 5px 5px;
-}
 
 .footer {
 	background-color: #a2ffe3;
@@ -132,6 +128,7 @@ main ul {
 }
 
 .footerText {
+	float: center;
 	text-align: center;
 	font-size: 75%;
 	font-style: italic;
