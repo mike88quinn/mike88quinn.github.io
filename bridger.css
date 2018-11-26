@@ -136,7 +136,6 @@ main ul {
 	font-size: 75%;
 	font-style: italic;
 	font-family: Georgia, Times New Roman, sans-serif;
-	float: center;
 }
 
 * { box-sizing: border-box; }
