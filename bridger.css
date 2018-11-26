@@ -119,17 +119,6 @@ main ul {
 	font-weight: bold;
 }
 
-fb-login-button {
-	margin: 0;
-}
-
-.footer {
-	background-color: #a2ffe3;
-	font-size: 75%;
-	font-style: italic;
-	text-align: center;
-	font-family: Georgia, Times New Roman, sans-serif;
-}
 
 * { box-sizing: border-box; }
 
