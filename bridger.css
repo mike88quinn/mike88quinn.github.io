@@ -121,10 +121,11 @@ main ul {
 
 .footer {
 	background-color: #a2ffe3;
+	padding: 20px;
 }
 
 .footerText {
-	font-align: center;
+	text-align: center;
 	font-size: 75%;
 	font-style: italic;
 	font-family: Georgia, Times New Roman, sans-serif;
