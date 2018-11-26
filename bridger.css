@@ -118,7 +118,11 @@ main ul {
 	color: #221a91;
 	font-weight: bold;
 }
-		 
+
+fb-login-button {
+	margin: 0;
+}
+
 .footer {
 	background-color: #a2ffe3;
 	font-size: 75%;
