@@ -2,112 +2,148 @@
 to render HTML5 block display elements as expected. (Chap 8) */
 header, main, nav, footer, figure, figcaption, aside, section, article { display: block; }
 
+/*
+ ********************************************************************************************
+ * Applies to all pages																																			*
+ ********************************************************************************************
+ */
+ 
 body { 
-	   color: #000000; 
-	   /* The body element selector. Add a declaration that configures Arial, Helvetica, or sans-serif font typeface. (Chap 5) */
-	   font-family: "sans-serif"; 
-	   /* The body element Selector. Change the background color to a light blue (#90C7E3). Add style declarations to display
-	   a linear gradient that blends from white (#FFFFFF) to light blue (#90C7E3) and does not repeat. (Chap 6)*/
-	   
-	   /* The body element selector. Change the background color to #B8DBED. Remove the background-image and
-	   background-repeat style declarations. (Chap 7) */
-	   background-color: #221a91;
-	   }
-		 
-/* The main element Selector. Add a new selector for the main element. Code declarations to configure 1px top
-padding, 20px right padding, 20px bottom padding, and 20px left padding. At the time this was written, Internet
-Explorer did not support default styles the HTML5 main element, so add the following style declaration using
-the display property (see Chapter 7) to nudge this browser to display as expected: display: block; (Chap 6) */
+	color: #000000;											/* set text color to black */
+	font-family: "sans-serif";					/* set font to sans serif */
+	background-color: #221a91;					/* set background color to dark blue */
+}
+
 main {
-		  /* The main element selector. Configure style declarations to set a white (#FFFFFF) background,
-		  190 pixels of left margin, and change the left padding to 30px. (Chap 7) */
-		  background: #a2ffe3;
-		  margin-left: 190px;
-		  margin-right: 190px;
-		  padding-top: 1px;
-		  padding-right: 20px;
-		  padding-bottom: 20px;
-		  padding-left: 30px;
-		  float: center;
-		  display: block;
-		  }
-	   
-header{ 
-	   background: radial-gradient(200% 150% at top, #221a91,#a2ffe3);
-       color: #000000; 
-	   /* The header element selector. Add declarations to display the background image named sunset.jpg on the right
-	   without any repeats. Also configure declarations to set 400% line-height and 1em text-indent. (Chap 5) */
-	   
-	   /* The header element selector. Remove the style declarations that configure the background image. Configure
-	   text color to #FFFFFF, height to 120px, top padding to 30px, and left padding to 3em. (Chap 7) */
-       background-position: right;
-       background-repeat: no-repeat;
-	   /* The header element Selector. Remove declarations for line height and indented text. Add declarations to
-	   configure 60px height, centered text, and 15px top padding. (Chap 6) */
-	   height: 120px;
-	   padding-top: 10px;
-	   padding-left: 1em;
-	   }
-	   
-nav   { 
-	  /* The nav element Selector. Change the background color to white (#FFFFFF). Add declarations
-	  to configure centered text and 10px padding. (Chap 6) */
-	  padding: 0.5em;
-      /* The nav element selector. Add a declaration to configure bold text. (Chap 5) */
-	  font-weight: bold;
-	  /* The nav element selector. This is the area that will float on the page. Remove the
-	  background-color declaration—the nav area will pick up the background color of the wrapper id.
-	  Remove the text-align declaration. Change the padding to 1.5em. Set 120% font size. Configure
-	  left float and a width of 160 pixels. (Chap 7) */
-	  font-size: 100%;
-	  background: #a2ffe3;
-	  text-align: center;
-	  border-top: 1px solid #000000;
-	  display: block;
-	  }
+	background: #a2ffe3;								/* set background color to light blue */
+	margin-left: 190px;
+	margin-right: 190px;
+	padding-top: 1px;
+	padding-right: 20px;
+	padding-bottom: 20px;
+	padding-left: 30px;
+	float: center;											/* main to float in center */
+	display: block;
+}
 
-/* Configure the navigation area. Use descendant selectors to configure the unordered list and anchor elements within the nav element.
-	Style the unordered list. Configure the ul element selector with no list markers, zero margin, zero left padding, and 1.2em font size. (Chap 7 */
+#wrapper { 
+	margin: auto;
+	margin-left: 10px;
+	margin-right: 10px;
+	background-color: #a2ffe3;
+	background-repeat: no-repeat;
+	border: 1px solid #000033;
+	min-width: 960px;
+	max-width: 2048px;
+}
+	   
+header { 
+	background: radial-gradient(200% 150% at top, #221a91,#a2ffe3);		/* radial fade from dark blue to light blue */
+	color: #000000;																										/* set text color to black */
+	background-position: right;																				/* set text to right */
+	background-repeat: no-repeat;
+	height: 120px;
+	padding-top: 10px;
+	padding-right: 1em;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+#bridge {
+	background-image: url(bridge.png);
+	height: 300px;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	margin-left: 190px;
+	margin-right: 190px;
+}
+
+nav {
+	padding: 0.5em;
+	font-weight: bold;									/* set font to bold */
+	font-size: 100%;
+	background: #a2ffe3;								/* set background color to dark blue */
+	text-align: center;
+	border-top: 1px solid #000000;
+	display: block;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
 nav ul {
-		margin: 0;
-		font-size: 1.2em;
-		list-style-type: none;
-		list-style-image: none;
-		}
+	margin: 0;
+	font-size: 1.2em;
+	list-style-type: none;
+	list-style-image: none;
+}
 
-/* The nav a element selector. Code styles to eliminate the display of the underline for hyperlinks
-(hint: use the nav a descendant selector with text-decoration: none; ) (Chap 5) */		
 nav a { 
-		text-decoration: none; 
-		padding: 10px;
-	  }
-/* 	Style unvisited navigation hyperlinks. Configure the :link pseudo-class with medium blue text color (#5C7FA3).
-	Style visited navigation hyperlinks. Configure the :visited pseudo-class with dark blue text color (#344873).
-	Style interactive hyperlinks. Configure the :hover pseudo-class with dark red text color (#A52A2A). (Chap 7) */
-nav a:link { color: #000000; }
-nav a:visited { color: #221a91; }
-nav a:hover { color: #FFFFFF; }
+	text-decoration: none; 
+	padding: 10px;
+}
+
+nav a:link		{ color: #000000; }			/* link color black */
+nav a:visited	{ color: #221a91; }			/* visited link color light blue */
+nav a:hover		{ color: #FFFFFF; }			/* hover color white */
 		
-h1	 { 
-	  /* The h1 element Selector. Add a style declaration to configure zero top margin. (Chap 6) */
-	  margin-top: 4em;
-	  margin-bottom: 0; 
-	  /* The h1 element selector. Add a declaration to display text in Georgia, Times New Roman, or serif font typeface. (Chap 5) */
-	   font-family: Book Antiqua;
-	  /* The h1 element selector. Configure 3em font size and 0.25em of letter spacing. (Chap 7) */
-	  font-size: 1em;
-	  letter-spacing: 0.15em;
-	  text-align: right;
-	 }
+h1 { 
+	margin-top: 4em;
+	margin-bottom: 0;
+	font-family: Book Antiqua;
+	font-size: 1em;
+	letter-spacing: 0.15em;
+	text-align: right;
+}
 		
-h2   { 
-	  color: #221a91;
-	  /* The h2 element selector. Add a declaration to display text in Georgia, Times New Roman, or serif font typeface. (Chap 5) */
-	  font-family: Georgia, Times New Roman, sans-serif;
-	  /* The h2 element Selector. Add a style declaration to configure 1px offset gray (#CCCCCC) text shadow. (Chap 6) */
-	  text-shadow: 1px 1px 1px #CCCCCC;
-	  }
-	
+h2 { 
+	color: #221a91;
+	font-family: Georgia, Times New Roman, sans-serif;
+	text-shadow: 1px 1px 1px #CCCCCC;
+}
+
+h3 {
+	font-family: Georgia, Times New Roman, sans-serif;
+	color: #221a91
+}
+
+ul {
+	list-style-image: url(marker.gif); 
+}
+
+main ul {
+	list-style-type: none;
+}
+
+.bridger { 
+	color: #221a91;
+	font-weight: bold;
+}
+		 
+.footer {
+	background-color: #a2ffe3;;
+	font-size: 75%;
+	font-style: italic;
+	text-align: center;
+	font-family: Georgia, Times New Roman, sans-serif;
+	padding: 20px;
+}
+
+* { box-sizing: border-box; }
+
+#mobile { 
+	display: none;
+}
+
+#desktop { 
+	display: inline;
+}
+
+/*
+ ********************************************************************************************
+ * Contact us page																																					*
+ ********************************************************************************************
+ */
+ 
 label {
 	float: left;
 	display: block;
@@ -115,37 +151,33 @@ label {
 	width: 120px;
 	padding-right: 10px;
 }
-		  
-/* Configure the input element and textarea element selectors. Set block display and 20 pixels of bottom margin. (Chap 10) */
+
 input {
 	display: block;
 	margin-bottom: 20px;
 	margin-top: 20px;
 }
-	
+
 textarea {
 	display: block;
 	margin-bottom: 20px;
 }
-	
-/* Configure the submit button with a 130px left margin. (Chap 10) */
+
 input[type="submit"] { margin-left: 130px; }
-	   
-h3   { 
-	  /* The h3 element selector. Code styles to display text in Georgia, Times New Roman, or serif font typeface.
-      Also configure #000033 text color for the h3 element selector. (Chap 5) */
-	  font-family: Georgia, Times New Roman, sans-serif;
-	  color: #221a91
-      }
-	   
-/* The ul element selector. Code styles to display the marker.gif as the list marker (bullet). (Chap 5) */
-ul   {
-	  list-style-image: url(marker.gif); 
-	  }
+  
+#contact {
+	font-size: 90%;
+}
+
+/*
+ ********************************************************************************************
+ * About us page																																						*
+ ********************************************************************************************
+ */
 		
 #gallery {
 	position: relative;
-	height: 440px;
+	height: 300px;
 }
 
 #gallery ul {
@@ -156,7 +188,7 @@ ul   {
 #gallery li { 
 	display: inline; 
 	float: left;
-	padding: 10px; 
+	padding: 8px; 
 }
 #gallery img { 
 	border-style: none;
@@ -188,199 +220,97 @@ figure {
 	opacity: .5;
 }
 
-/* Configure the unordered list in the main content area. Replace the ul element selector with a descendant selector (main ul)
-to specify only ul elements within the main content. (Chap 7) */
-main ul {
-		 list-style-type: none;
-		}
-	   
-dt   { 
-	  color: #221a91;
-	  }
+/*
+ ********************************************************************************************
+ * About us page																																						*
+ ********************************************************************************************
+ */
 
-.bridger { 
-	     color: #221a91;
-		 /* The resort class selector. Add a declaration to display bold text. (Chap 5) */
-		 font-weight: bold;
-		 }
-		 
-.footer { 
-		 /* The footer element selector. Code styles to configure 75% font size, italic font style,
-         centered text, and Georgia, Times New Roman, or serif font typeface. (Chap 5) */
-		 
-		 /* The footer element selector. Configure styles to set a 190 pixel left margin and white
-		 (#FFFFFF) background color. (Chap 7) */
-		 background-color: #a2ffe3;;
-		 font-size: 75%;
-		 font-style: italic;
-		 text-align: center;
-		 font-family: Georgia, Times New Roman, sans-serif;
-		 /* The footer element Selector. Add a declaration to configure 20px of padding. (Chap 6) */
-		 padding: 20px;
-         }
+dt{ 
+	color: #221a91;
+}
 
-/* The contact id selector. Code styles to display text with 90% font size. (Chap 5) */		  
-#contact { 
-		  font-size: 90%;
-		  }
+/*
+ ********************************************************************************************
+ * Analytics page																																						*
+ ********************************************************************************************
+ */
 
-/* The wrapper id Selector. Add a new selector for an id named wrapper. Configure the wrapper id to be
-centered (see Hands-On Practice 6.4) with a width of 80%, white background color (#FFFFFF), a minimum width
-of 960 pixels, a maximum width of 2048px, and a 3px offset dark (#333333) box shadow. (Chap 6) */
-#wrapper { 
-		  margin: auto;
-		  /* The wrapper id selector. Change the background color from white (#FFFFFF) to blue (#90C7E3).
-		  Configure a 1px solid dark blue (#000033) border. Copy the background image style declaration
-		  for the linear gradient from the body selector. This will display behind the navigation area. (Chap 7) */
-          background-color: #a2ffe3;
-		  background-repeat: no-repeat;
-		  border: 1px solid #000033;
-          min-width: 960px;
-		  max-width: 2048px;
-		  }
-		
-/* The homehero id Selector. Add a new selector for an id named homehero. Code declarations to configure 300px
-height and to display the coast.jpg background image to fill the space (use background-size: 100% 100%;) without
-repeating. (Chap 6) */
-#homehero {
-		  /* The homehero id selector. Configure a 190px left margin. Change the background image to coast2.jpg. (Chap 7) */
-		  background-image: url(coast2.jpg);
-		  height: 300px;
-		  background-size: 100% 100%;
-		  background-repeat: no-repeat;
-		  margin-left: 190px;
-		  margin-right: 190px;
-		  }
-		  
-#bridge {
-		  /* The homehero id selector. Configure a 190px left margin. Change the background image to coast2.jpg. (Chap 7) */
-		  background-image: url(bridge.png);
-		  height: 300px;
-		  background-size: 100% 100%;
-		  background-repeat: no-repeat;
-		  margin-left: 190px;
-		  margin-right: 190px;
-		  }
-		  
-/* The yurthero id Selector. Add a new selector for an id named yurthero. Code declarations to configure 300px
-height and to display the yurt.jpg background image to fill the space (use background-size: 100% 100%;) without
-repeating. (Chap 6) */
-#yurthero {
-		   /* The yurthero id selector. Configure a 190px left margin. (Chap 7) */
-		   margin-left: 190px;
-		   background-image: url(yurt.jpg);
-		   height: 300px;
-		   background-size: 100% 100%;
-		   background-repeat: no-repeat;
-		  }
-
-/* The trailhero id Selector. Add a new selector for an id named trailhero. Code declarations to configure 300px height
-and to display the trail.jpg background image to fill the space (use background-size: 100% 100%;) without repeating. (Chap 6) */
-#trailhero {
-		   /* The trailhero id selector. Configure a 190px left margin. (Chap 7) */
-		   margin-left: 190px;
-		   background-image: url(trail.jpg);
-		   height: 300px;
-		   background-size: 100% 100%;
-		   background-repeat: no-repeat;
-		   }
-		   
-/* The universal selector. Set the box-sizing property to border-box. * { box-sizing: border-box; } (Chap 7) */		   
-* 		{ box-sizing: border-box; }
-
-/* The mobile id. Set display to none. You’ll apply this id when you edit the home page (index.html). (Chap 8) */
-#mobile  { 
-		  display: none;
-		  }
-		  
-/* The desktop id. Set display to inline. You’ll apply this id later when you edit the home page
-(index.html). (Chap 8) */
-#desktop  { 
-		  display: inline;
-		  }
-		  
-/* Configure the table. Code a new style rule for the table element selector that configures a table with a 2 pixel
-solid blue border (#3399CC) and no cellspacing (use border-collapse: collapse;). (Chap 9) */
 table { 
 	margin: auto;
 	border: 2px solid #3399CC;
 	border-collapse: collapse;
 }
-	
-/* Configure the table cells. Code a new style rule for the td and th element selectors that sets padding to 0.5em and
-configures a 2 pixel solid blue border (#3399CC). (Chap 9) */
+
 td, th {
 	border: 2px solid #3399CC;
 	padding: 0.5em;
 }
-	
-/* Center the td content. Code a new style rule for the td element selector that centers text. (Chap 9) */
-td	{
+
+td {
 	text-align: center;
-	}
-	
-/* Configure the text class. Notice that the content in the table data cells that contain the text description
-is not centered. Code a new style rule for a class named text that will override the td style rule and left-align
-the text. (Chap 9) */
+}
+
 .text {
 	text-align: left;
-	}
-	
-/* Configure alternate-row background color. The table looks more appealing if the rows have alternate background
-colors but is still readable without them. Apply the :nth-of-type CSS3 pseudo-class to configure the odd table rows
-with a light blue background color (#F5FAFC). (Chap 9) */
+}
+
 tr:nth-of-type(odd) { background-color: #F5FAFC; }
-		  
-/* Always set the map height explicitly to define the size of the div
- * element that contains the map. */
+
+/*
+ ********************************************************************************************
+ * Map page																																									*
+ ********************************************************************************************
+ */
+ 
 #map {
 	margin: 0 auto 0 auto;
   height: 450px;  /* The height is 400 pixels */
   width: 900px;  /* The width is the width of the web page */
 }
-			
-			
-/* Code a media query below the existing styles to select for typical tablet device viewport size. (Chap 8) */
+
 @media only screen and (max-width: 64em) {
-	/* The body element selector. Set margin to 0 and the background color to #FFFFFF;. (Chap 8) */
+
+/*
+ ********************************************************************************************
+ * Applies to all pages																																			*
+ ********************************************************************************************
+ */
+ 
 	body {
 		margin: 0;
 		background-color: #FFFFFF;
 	}
-	/* The wrapper id selector. Set minimum width to 0, width to auto, box-shadow to none, and border
-		to none. (Chap 8) */
+	
 	#wrapper {
 		min-width: 0;
 		width: auto;
 		box-shadow: none;
 		border: none;
 	}
-	/* The header element selector. Set top padding to 0.5em, bottom padding to 0.5em, and left padding
-	to 0. Set height to auto. (Chap 8) */
+	
 	header {
 		padding-top: 0.5em;
 		padding-bottom: 0.5em;
 		padding-left: 0;
 		height: 120px;
 	}
-	/* The h1 element selector. Set letter-spacing to 0.1em. (Chap 8) */
+	
 	h1 {
 		letter-spacing: 0.1em;
 	}
-	/* The main element selector. Set left margin to 0. (Chap 8) */
+	
 	main {
 		margin-left: 0;
 	}
-	/* The nav element selector. Eliminate float (Hint: Use float: none;), set the width to auto, centered
-	text, and configure 0.5em padding. (Chap 8) */
+	
 	nav {
 		float: none;
 		width: auto;
 		text-align: center;
 		padding: 0.5em;
 	}
-	/* Navigation list items. Use a descendant selector to configure li elements within the navigation
-	area with inline display, 0.25em top and bottom padding, and 0.75em left and right padding. (Chap 8) */
+	
 	nav li {
 		display: inline;
 		padding-top: 0.25em;
@@ -388,33 +318,21 @@ tr:nth-of-type(odd) { background-color: #F5FAFC; }
 		padding-left: 0.75em;
 		padding-right: 0.75em;
 	}
-	/* The homehero, yurthero, and trailhero id selectors. Set left margin to 0. Set height to 200
-	pixels. (Chap 8) */
-	#homehero {
-		margin-left: 0;
-		height: 200px;
-	}
 	
-	#yurthero {
-		margin-left: 0;
-		height: 200px;
-	}
-	
-	#trailhero {
-		margin-left: 0;
-		height: 200px;
-	}
-	/* The footer element selector. Set left margin to 0. (Chap 8) */
 	.footer {
 		margin-left: 0;
 		background-color: #a2ffe3;
 	}
 }
 
-/* Code a media query below the existing styles to select for typical smartphone device viewport size. (Chap 8) */
 @media only screen and (max-width: 37.5em) {
-	/* The main element selector. Set top and bottom padding to 0.1em, left and right padding to 1em,
-	and font size to 90%. (Chap 8) */
+
+/*
+ ********************************************************************************************
+ * Applies to all pages																																			*
+ ********************************************************************************************
+ */
+
 	main {
 		padding-top: 0.1em;
 		padding-bottom: 0.1em;
@@ -422,7 +340,7 @@ tr:nth-of-type(odd) { background-color: #F5FAFC; }
 		padding-right: 1em;
 		font-size: 90%;
 	}
-	/* The h1 element selector. Set font size to 2em. (Chap 8) */
+	
 	h1 {
 		letter-spacing: 0.1em;
 	}
@@ -434,43 +352,24 @@ tr:nth-of-type(odd) { background-color: #F5FAFC; }
 		height: 120px;
 	}
 	
-	/* The nav element selector. Set padding to 0. (Chap 8) */
 	nav {
 		padding: 0;
 	}
-	/* Navigation list items. Use a descendant selector to configure li elements within the navigation area
-	with block display, 0 margin, and a 2 pixel solid dark (#330000) bottom border. (Chap 8) */
+	
 	nav li {
 		display: block;
 		margin: 0;
 		border-bottom: 2px solid #000033;
 	}
-	/* Navigation hyperlinks. Use a descendant selector to configure elements within the navigation
-	area with block display. This will provide the user a larger area to tap when selecting a hyperlink. (Chap 8) */
+	
 	nav ul {
 		display: block;
 	}
-	/* The homehero, yurthero, and trailhero id selectors. Do not display the image. Set the background-image
-	property to none and the height to 0. (Chap 8) */
-	#homehero {
-		background-image: none;
-		height: 0;
-	}
 	
-	#yurthero {
-		background-image: none;
-		height: 0;
-	}
-	
-	#trailhero {
-		background-image: none;
-		height: 0;
-	}
-	/* The mobile id selector. Set display to inline. (Chap 8) */
 	#mobile {
 		display: inline;
 	}
-	/* The desktop id selector. Set display to none. (Chap 8) */
+	
 	#desktop {
 		display: none;
 	}
