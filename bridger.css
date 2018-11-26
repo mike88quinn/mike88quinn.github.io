@@ -119,6 +119,10 @@ main ul {
 	font-weight: bold;
 }
 
+.fb-login-button {
+	float: left;
+}
+
 .footer {
 	background-color: #a2ffe3;
 	padding: 20px;
