@@ -120,7 +120,8 @@ main ul {
 }
 
 .login {
-	float: right;
+	float: left;
+	margin: 0 0 5px 5px;
 }
 
 .footer {
