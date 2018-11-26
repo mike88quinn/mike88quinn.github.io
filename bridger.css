@@ -122,6 +122,8 @@ main ul {
 .footer {
 	background-color: #a2ffe3;
 	padding: 20px;
+	margin-left: 190px;
+	margin-right: 190px;
 }
 
 .footerText {
