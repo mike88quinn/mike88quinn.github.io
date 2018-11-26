@@ -119,8 +119,8 @@ main ul {
 	font-weight: bold;
 }
 
-.fb-login-button {
-	float: left;
+.login {
+	float: right;
 }
 
 .footer {
