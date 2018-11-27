@@ -127,11 +127,15 @@ main ul {
 }
 
 .footerText {
-	float: center;
+	float: right;
 	text-align: center;
 	font-size: 75%;
 	font-style: italic;
 	font-family: Georgia, Times New Roman, sans-serif;
+}
+
+.fb-share-button span {
+   top: -6px;
 }
 
 * { box-sizing: border-box; }
