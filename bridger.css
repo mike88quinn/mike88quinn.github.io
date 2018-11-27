@@ -134,6 +134,8 @@ main ul {
 	font-family: Georgia, Times New Roman, sans-serif;
 }
 
+/* I was having issues with the Facebook button not allowing text to float next to it. This fix was obtained
+	from Stack Overflow https://stackoverflow.com/questions/4770372/misalignment-of-facebook-twitter-buttons */
 .fb-share-button span {
    top: -6px;
 }
