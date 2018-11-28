@@ -22,7 +22,7 @@ function initMap() {
 		Array.prototype.forEach.call(markers, function(markerElem) {
 			var id = markerElem.getAttribute('id');
 			var name = markerElem.getAttribute('name');
-			var address = markerElem.getAttribute('address');
+			var address = markerElem.getAttribute('email');
 			var type = markerElem.getAttribute('type');
 			var point = new google.maps.LatLng(
 					parseFloat(markerElem.getAttribute('lat')),
@@ -31,12 +31,15 @@ function initMap() {
 			var infowincontent = document.createElement('div');
 			var strong = document.createElement('strong');
 			strong.textContent = name
-			infowincontent.appendChild(strong);
-			infowincontent.appendChild(document.createElement('br'));
 	
 			var text = document.createElement('text');
 			text.textContent = address
 			infowincontent.appendChild(text);
+			
+			infowincontent.appendChild(strong);
+			infowincontent.appendChild(document.createElement('br'));
+			infowincontent.appendChild(text);
+			
 			var icon = customLabel[type] || {};
 			var marker = new google.maps.Marker({
 				map: map,
