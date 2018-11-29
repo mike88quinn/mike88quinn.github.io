@@ -28,8 +28,12 @@ function initMap() {
 			var email = markerElem.getAttribute('email');
 			var address = markerElem.getAttribute('address');
 			var point;
-			geocoder.geocode( { 'address': address}, function() {
-				point = results[0].geometry.location;
+			geocoder.geocode( { 'address': address}, function(results, status) {
+				if (status == 'OK') {
+					point = results[0].geometry.location;
+				} else {
+					alert('Geocode was not successful for the following reason: ' + status);
+				}
 			});
 			var type = markerElem.getAttribute('type');
 	
