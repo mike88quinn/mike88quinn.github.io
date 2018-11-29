@@ -96,7 +96,7 @@ function checkLoginState() {
 }
 
 // login with facebook with extra permissions
-function login() {
+function login() { 
 	FB.login(function(response) {
 		if (response.status === 'connected') {
     		document.getElementById('status').innerHTML = 'We are connected.';
