@@ -49,12 +49,6 @@ window.fbAsyncInit = function() {
 	FB.Event.subscribe("auth.logout", function() {window.location.href = 'https://mike88quinn.github.io'});
 	FB.Event.subscribe("auth.login", function() {window.location.href = 'https://mike88quinn.github.io/authHome.html'});
 	
-	var xhttp = new XMLHttpRequest();
-	xhttp.onreadystatechange = function() {
-		if (this.readyState == 4 && this.status == 200) {
-			myFunction(this);
-		}
-	};
 };
 
 // Load the SDK asynchronously
@@ -117,9 +111,10 @@ function login() {
 		
 // getting basic user info
 function getFacebookPhoto() {
-	FB.api('/me', 'GET', {fields: 'first_name,last_name,name,id,email,picture.width(150).height(150)'}, function(response) {
+	FB.api('/me', 'GET', {fields: 'first_name,last_name,name,id,email,location,picture.width(150).height(150)'}, function(response) {
 		document.getElementById('userPhoto').innerHTML = response.picture.data.url;
 		document.getElementById('name').innerHTML = response.name;
+		document.getElementById('location').innerHTML = response.location;
 		document.getElementById('email').innerHTML = response.email;
 		document.getElementById('id').innerHTML = response.id;
 	});
