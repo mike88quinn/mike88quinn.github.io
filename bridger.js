@@ -112,7 +112,7 @@ function login() {
     	} else {
     		document.getElementById('status').innerHTML = 'You are not logged into Facebook.';
     	}
-	}, {scope: 'email'});
+	}, {scope: 'user_location,email'});
 }
 		
 // getting basic user info
