@@ -29,21 +29,8 @@ window.fbAsyncInit = function() {
 			// the user's ID, a valid access token, a signed
 			// request, and the time the access token 
 			// and signed request each expire.
-			if(window.location.href.indexOf("auth") > -1) {
-				if(window.location.href.indexOf("authProfile") > -1) {
-					FB.api(
-						'/100030492783650/picture',
-						'GET',
-						{"redirect":"false"},
-						function(response) {
-							document.getElementById('userPhoto').innerHTML = "<img src='" + response.picture.data.url + "'>";
-						}
-					);
-				}
-				console.log('Authorized Location');
-			} else {
-				window.location.href = "https://mike88quinn.github.io/authHome.html";
-			}
+			window.location.href = "https://mike88quinn.github.io/authHome.html";
+		}
 			var uid = response.authResponse.userID;
 			var accessToken = response.authResponse.accessToken;
 		} else {
@@ -65,14 +52,6 @@ window.fbAsyncInit = function() {
 			myFunction(this);
 		}
 	};
-	xhttp.open("GET", "user_data.xml", true);
-	xhttp.send();
-
-	function myFunction(xml) {
-		var xmlDoc = xml.responseXML;
-		var x = xmlDoc.getElementsByTagName("marker");
-		x[0].setAttribute("id", "3");
-	}
 };
 
 // Load the SDK asynchronously
