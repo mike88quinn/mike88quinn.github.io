@@ -137,9 +137,9 @@ function login() {
 function getFacebookPhoto() {
 	FB.api('/me', 'GET', {fields: 'first_name,last_name,name,id,email,location,picture.width(150).height(150)'}, function(response) {
 		document.getElementById('userPhoto').innerHTML = "<img src='" + response.picture.data.url + "'>";
-		document.getElementById('name').innerHTML = response.name>";
-		document.getElementById('location').innerHTML = response.location>";
-		document.getElementById('email').innerHTML = response.email>";
-		document.getElementById('id').innerHTML = response.id>";
+		document.getElementById('name').innerHTML = response.name;
+		document.getElementById('location').innerHTML = response.location;
+		document.getElementById('email').innerHTML = response.email;
+		document.getElementById('id').innerHTML = response.id;
 	});
 }
