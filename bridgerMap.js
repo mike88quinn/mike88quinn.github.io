@@ -11,13 +11,13 @@ function initMap() {
 		var xml = data.responseXML;
 		var markers = xml.documentElement.getElementsByTagName('marker');
 		Array.prototype.forEach.call(markers, function(markerElem) {
-			var id = markerElem.getElementsByTagName('id');
-			var name = markerElem.getElementsByTagName('name');
-			var address = markerElem.getElementsByTagName('email');
-			var type = markerElem.getElementsByTagName('type');
+			var id = markerElem.getAttribute('id');
+			var name = markerElem.getAttribute('name');
+			var address = markerElem.getAttribute('email');
+			var type = markerElem.getAttribute('type');
 			var point = new google.maps.LatLng(
-					parseFloat(markerElem.getElementsByTagName('lat')),
-					parseFloat(markerElem.getElementsByTagName('lng')));
+					parseFloat(markerElem.getAttribute('lat')),
+					parseFloat(markerElem.getAttribute('lng')));
 	
 			var infowincontent = document.createElement('div');
 			var strong = document.createElement('strong');
