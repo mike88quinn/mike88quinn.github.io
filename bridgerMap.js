@@ -42,7 +42,7 @@ function initMap() {
 					var icon = customLabel[type] || {};
 					var marker = new google.maps.Marker({
 						map: map,
-						position: results[0].geometry.location;
+						position: results[0].geometry.location,
 						label: icon.label
 					});
 					
