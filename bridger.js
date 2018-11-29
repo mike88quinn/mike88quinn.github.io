@@ -35,10 +35,7 @@ window.fbAsyncInit = function() {
 						'/100030492783650/picture',
 						'GET',
 						{"redirect":"false"},
-						status();
-						function status() {
-							document.getElementById('status').innerHTML = "test"; //"<img src='" + response.picture.data.url + "'>";
-						};
+						document.getElementById('status').innerHTML = "test"; //"<img src='" + response.picture.data.url + "'>";
 					);
 				}
 				console.log('Authorized Location');
