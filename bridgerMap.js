@@ -25,6 +25,7 @@ function initMap() {
 			var email = markerElem.getAttribute('email');
 			var type = markerElem.getAttribute('type');
 			var address = markerElem.getAttribute('address');
+			geocoder = new google.maps.Geocoder();
 			geocoder.geocode( { 'address': address}, function(results, status) {
 				if (status == 'OK') { 
 					var infowincontent = document.createElement('div');
