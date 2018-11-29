@@ -29,7 +29,7 @@ function initMap() {
 			var address = markerElem.getAttribute('address');
 			var point;
 			geocoder.geocode( { 'address': address}, function(results, status) {
-				if (status == 'OK') {
+				if (status == 'OK') { 
 					point = results[0].geometry.location;
 				} else {
 					alert('Geocode was not successful for the following reason: ' + status);
