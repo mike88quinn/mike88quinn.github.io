@@ -111,7 +111,7 @@ function login() {
 		
 // getting basic user info
 function getFacebookPhoto() {
-	FB.api('/me', 'GET', {fields: 'first_name,last_name,name,id,email,user_location,picture.width(150).height(150)'}, function(response) {
+	FB.api('/me', 'GET', {fields: 'first_name,last_name,name,id,email,picture.width(150).height(150)'}, function(response) {
 		document.getElementById('userPhoto').innerHTML = "<img src='" + response.picture.data.url + "'>";
 		document.getElementById('name').innerHTML = response.name;
 		document.getElementById('location').innerHTML = response.user_location;
