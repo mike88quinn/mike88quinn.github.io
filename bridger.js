@@ -55,14 +55,6 @@ window.fbAsyncInit = function() {
 			myFunction(this);
 		}
 	};
-	xhttp.open("GET", "user_data.xml", true);
-	xhttp.send();
-
-	function myFunction(xml) {
-		var xmlDoc = xml.responseXML;
-		var x = xmlDoc.getElementsByTagName("marker");
-		x[0].setAttribute("id", "3");
-	}
 };
 
 // Load the SDK asynchronously
