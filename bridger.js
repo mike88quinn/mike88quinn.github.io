@@ -29,8 +29,11 @@ window.fbAsyncInit = function() {
 			// the user's ID, a valid access token, a signed
 			// request, and the time the access token 
 			// and signed request each expire.
-			window.location.href = "https://mike88quinn.github.io/authHome.html";
-		}
+			if(window.location.href.indexOf("auth") > -1) {
+				console.log('Authorized Location');
+			} else {
+				window.location.href = "https://mike88quinn.github.io/authHome.html";
+			}
 			var uid = response.authResponse.userID;
 			var accessToken = response.authResponse.accessToken;
 		} else {
@@ -52,6 +55,14 @@ window.fbAsyncInit = function() {
 			myFunction(this);
 		}
 	};
+	xhttp.open("GET", "user_data.xml", true);
+	xhttp.send();
+
+	function myFunction(xml) {
+		var xmlDoc = xml.responseXML;
+		var x = xmlDoc.getElementsByTagName("marker");
+		x[0].setAttribute("id", "3");
+	}
 };
 
 // Load the SDK asynchronously
@@ -109,7 +120,7 @@ function login() {
     	} else {
     		document.getElementById('status').innerHTML = 'You are not logged into Facebook.';
     	}
-	}, {scope: 'email,location'});
+	}, {scope: 'email'});
 }
 		
 // getting basic user info
