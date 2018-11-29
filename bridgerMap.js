@@ -7,13 +7,16 @@ var customLabel = {
 	}
 };
 
+var geocoder;
 var map, infoWindow;
 function initMap() {
+  geocoder = new google.maps.Geocoder();
+  var latlng = new google.maps.LatLng(-34.397, 150.644);
   map = new google.maps.Map(document.getElementById('map'), {
-    center: {lat: -34.397, lng: 150.644},
+    latlng: {lat: -34.397, lng: 150.644},
     zoom: 12,
   });
-  var infoWindow = new google.maps.InfoWindow;
+  infoWindow = new google.maps.InfoWindow;
 
 	// Change this depending on the name of your PHP or XML file
 	downloadUrl('user_data.xml', function(data) {
@@ -22,18 +25,24 @@ function initMap() {
 		Array.prototype.forEach.call(markers, function(markerElem) {
 			var id = markerElem.getAttribute('id');
 			var name = markerElem.getAttribute('name');
-			var address = markerElem.getAttribute('email');
+			var email = markerElem.getAttribute('email');
+			var town = document.getElementById('town').value;
+			var point;
+			geocoder.geocode( { 'town': address}, function(results, status) {
+				if (status == 'OK') {
+					point = results[0].geometry.location;
+				} else {
+					alert('Geocode was not successful for the following reason: ' + status);
+				}
+			});
 			var type = markerElem.getAttribute('type');
-			var point = new google.maps.LatLng(
-					parseFloat(markerElem.getAttribute('lat')),
-					parseFloat(markerElem.getAttribute('lng')));
 	
 			var infowincontent = document.createElement('div');
 			var strong = document.createElement('strong');
 			strong.textContent = name
 	
 			var text = document.createElement('text');
-			text.textContent = address
+			text.textContent = email
 			infowincontent.appendChild(text);
 			
 			infowincontent.appendChild(strong);
@@ -97,3 +106,22 @@ function downloadUrl(url, callback) {
 }
 
 function doNothing() {}
+------------------------------------------------------------------------------------------
+
+  map = new google.maps.Map(document.getElementById('map'), mapOptions);
+}
+
+function codeAddress() {
+  var address = document.getElementById('address').value;
+  geocoder.geocode( { 'address': address}, function(results, status) {
+    if (status == 'OK') {
+      map.setCenter(results[0].geometry.location);
+      var marker = new google.maps.Marker({
+          map: map,
+          position: results[0].geometry.location
+      });
+    } else {
+      alert('Geocode was not successful for the following reason: ' + status);
+    }
+  });
+}
