@@ -1,32 +1,23 @@
-var customLabel = {
-	restaurant: {
-		label: 'R'
-	},
-	bar: {
-		label: 'B'
-	}
-};
-
 var map, infoWindow;
 function initMap() {
   map = new google.maps.Map(document.getElementById('map'), {
     center: {lat: -34.397, lng: 150.644},
     zoom: 12,
   });
-  var infoWindow = new google.maps.InfoWindow;
+  infoWindow = new google.maps.InfoWindow;
 
 	// Change this depending on the name of your PHP or XML file
 	downloadUrl('user_data.xml', function(data) {
 		var xml = data.responseXML;
 		var markers = xml.documentElement.getElementsByTagName('marker');
 		Array.prototype.forEach.call(markers, function(markerElem) {
-			var id = markerElem.getAttribute('id');
-			var name = markerElem.getAttribute('name');
-			var address = markerElem.getAttribute('email');
-			var type = markerElem.getAttribute('type');
+			var id = markerElem.getElementsByTagName('id');
+			var name = markerElem.getElementsByTagName('name');
+			var address = markerElem.getElementsByTagName('email');
+			var type = markerElem.getElementsByTagName('type');
 			var point = new google.maps.LatLng(
-					parseFloat(markerElem.getAttribute('lat')),
-					parseFloat(markerElem.getAttribute('lng')));
+					parseFloat(markerElem.getElementsByTagName('lat')),
+					parseFloat(markerElem.getElementsByTagName('lng')));
 	
 			var infowincontent = document.createElement('div');
 			var strong = document.createElement('strong');
