@@ -1,10 +1,19 @@
+var customLabel = {
+	restaurant: {
+		label: 'R'
+	},
+	bar: {
+		label: 'B'
+	}
+};
+
 var map, infoWindow;
 function initMap() {
   map = new google.maps.Map(document.getElementById('map'), {
     center: {lat: -34.397, lng: 150.644},
     zoom: 12,
   });
-  infoWindow = new google.maps.InfoWindow;
+  var infoWindow = new google.maps.InfoWindow;
 
 	// Change this depending on the name of your PHP or XML file
 	downloadUrl('user_data.xml', function(data) {
