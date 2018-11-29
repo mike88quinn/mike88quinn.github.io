@@ -7,16 +7,13 @@ var customLabel = {
 	}
 };
 
-var geocoder;
 var map, infoWindow;
 function initMap() {
-  geocoder = new google.maps.Geocoder();
-  var latlng = new google.maps.LatLng(-34.397, 150.644);
   map = new google.maps.Map(document.getElementById('map'), {
-    latlng: {lat: -34.397, lng: 150.644},
+    center: {lat: -34.397, lng: 150.644},
     zoom: 12,
   });
-  infoWindow = new google.maps.InfoWindow;
+  var infoWindow = new google.maps.InfoWindow;
 
 	// Change this depending on the name of your PHP or XML file
 	downloadUrl('user_data.xml', function(data) {
@@ -26,8 +23,9 @@ function initMap() {
 			var id = markerElem.getAttribute('id');
 			var name = markerElem.getAttribute('name');
 			var email = markerElem.getAttribute('email');
+			var type = markerElem.getAttribute('type');
 			var address = markerElem.getAttribute('address');
-			var point;
+			/*var point;
 			geocoder.geocode( { 'address': address}, function(results, status) {
 				if (status == 'OK') { 
 					point = results[0].geometry.location;
@@ -35,7 +33,10 @@ function initMap() {
 					alert('Geocode was not successful for the following reason: ' + status);
 				}
 			});
-			var type = markerElem.getAttribute('type');
+			var type = markerElem.getAttribute('type');*/
+			var point = new google.maps.LatLng(
+					parseFloat(markerElem.getAttribute('lat')),
+					parseFloat(markerElem.getAttribute('lng')));
 	
 			var infowincontent = document.createElement('div');
 			var strong = document.createElement('strong');
