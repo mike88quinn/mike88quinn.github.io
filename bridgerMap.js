@@ -28,7 +28,7 @@ function initMap() {
 			var email = markerElem.getAttribute('email');
 			var town = markerElem.getAttribute('town');
 			var point;
-			geocoder.geocode( { 'town': address}, function(results, status) {
+			geocoder.geocode( { 'town': town}, function(results, status) {
 				if (status == 'OK') {
 					point = results[0].geometry.location;
 				} else {
