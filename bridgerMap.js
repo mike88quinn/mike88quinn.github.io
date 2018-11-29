@@ -26,7 +26,7 @@ function initMap() {
 			var id = markerElem.getAttribute('id');
 			var name = markerElem.getAttribute('name');
 			var email = markerElem.getAttribute('email');
-			var town = document.getElementById('town').value;
+			var town = markerElem.getAttribute('town');
 			var point;
 			geocoder.geocode( { 'town': address}, function(results, status) {
 				if (status == 'OK') {
