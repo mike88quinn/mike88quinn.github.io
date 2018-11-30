@@ -49,11 +49,11 @@ function initMap() {
 					});
 					
 					marker.addListener('click', function() {
-						infoWindow.setContent(infowincontent);
-						infoWindow.open(map, marker);
 						document.getElementById('userName').innerHTML = "name: " + name;
 						document.getElementById('userEmail').innerHTML = "email: " + email;
 						document.getElementById('userid').innerHTML = "ID: " + id;
+						infoWindow.setContent(infowincontent);
+						infoWindow.open(map, marker);
 					});
 				} else {
 					alert('Geocode was not successful for the following reason: ' + status);
