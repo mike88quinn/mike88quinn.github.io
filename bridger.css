@@ -279,17 +279,18 @@ tr:nth-of-type(odd) { background-color: #F5FAFC; }
 	margin: 20px 400px 20px 0;
 	padding-bottom: 20px;
   height: 300px;  				/* The height is 400 pixels */
-  width: 50%;  						/* The width is the width of the web page */
+  width: 40%;  						/* The width is the width of the web page */
 	float: left;
 	position: relative;
 }
 
 #mapUser {
-	text-align: right;
+	text-align: left;
+	padding-top: 20px;
   height: 450px;  				/* The height is 400 pixels */
   width: 50%;  						/* The width is the width of the web page */
-	float: right;
-	position: absolute;
+	float: center;
+	position: relative;
 }
 
 @media only screen and (max-width: 64em) {
