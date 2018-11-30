@@ -278,7 +278,7 @@ tr:nth-of-type(odd) { background-color: #F5FAFC; }
 #map {
 	margin: 20px 400px 20px 0;
   height: 300px;  				/* The height is 400 pixels */
-  width: 100%;  						/* The width is the width of the web page */
+  width: 50%;  						/* The width is the width of the web page */
 	float: left;
 	position: absolute;
 }
