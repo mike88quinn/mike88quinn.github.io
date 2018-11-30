@@ -24,6 +24,7 @@ function initMap() {
 			var name = markerElem.getAttribute('name');
 			var email = markerElem.getAttribute('email');
 			var type = markerElem.getAttribute('type');
+			var imgUrl = markerElem.getAttribute('url');
 			var address = markerElem.getAttribute('address');
 			geocoder = new google.maps.Geocoder();
 			geocoder.geocode( { 'address': address}, function(results, status) {

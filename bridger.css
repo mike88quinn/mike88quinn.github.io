@@ -16,8 +16,8 @@ body {
 
 main {
 	background: #a2ffe3;								/* set background color to light blue */
-	margin-left: 190px;
-	margin-right: 190px;
+	margin-left: 150px;
+	margin-right: 150px;
 	padding-top: 1px;
 	padding-right: 20px;
 	padding-bottom: 20px;
@@ -276,10 +276,19 @@ tr:nth-of-type(odd) { background-color: #F5FAFC; }
  */
  
 #map {
-	margin: 0 auto 0 auto;
-  height: 450px;  				/* The height is 400 pixels */
+	margin: 20px 400px 20px 0;
+  height: 300px;  				/* The height is 400 pixels */
   width: 50%;  						/* The width is the width of the web page */
 	float: left;
+	position: relative;
+}
+
+#mapUser {
+	text-align: right;
+  height: 450px;  				/* The height is 400 pixels */
+  width: 50%;  						/* The width is the width of the web page */
+	float: right;
+	position: absolute;
 }
 
 @media only screen and (max-width: 64em) {
@@ -289,7 +298,7 @@ tr:nth-of-type(odd) { background-color: #F5FAFC; }
  * Applies to all pages																																			*
  ********************************************************************************************
  */
- 
+
 	body {
 		margin: 0;
 		background-color: #FFFFFF;
