@@ -51,7 +51,6 @@ function initMap() {
 					marker.addListener('click', function() {
 						infoWindow.setContent(infowincontent);
 						infoWindow.open(map, marker);
-						document.getElementById('userImage').innerHTML = "user photo: <img src='" + imgUrl + "'>";
 						document.getElementById('userName').innerHTML = "name: " + name;
 						document.getElementById('userEmail').innerHTML = "email: " + email;
 						document.getElementById('userid').innerHTML = "ID: " + id;
