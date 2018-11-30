@@ -34,7 +34,6 @@ function initMap() {
 					var marker = new google.maps.Marker({
 						map: map,
 						position: results[0].geometry.location,
-						label: icon.label
 					});
 					
 					marker.addListener('click', function() {
