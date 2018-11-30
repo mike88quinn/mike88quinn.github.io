@@ -280,7 +280,7 @@ tr:nth-of-type(odd) { background-color: #F5FAFC; }
   height: 300px;  				/* The height is 400 pixels */
   width: 50%;  						/* The width is the width of the web page */
 	float: left;
-	position: relative;
+	position: absolute;
 }
 
 #mapUser {
