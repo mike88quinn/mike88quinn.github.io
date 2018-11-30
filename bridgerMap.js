@@ -49,9 +49,6 @@ function initMap() {
 					});
 					
 					marker.addListener('click', function() {
-						document.getElementById('userName').innerHTML = "name: " + name;
-						document.getElementById('userEmail').innerHTML = "email: " + email;
-						document.getElementById('userid').innerHTML = "ID: " + id;
 						infoWindow.setContent(infowincontent);
 						infoWindow.open(map, marker);
 					});
