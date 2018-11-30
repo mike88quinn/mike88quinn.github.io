@@ -103,7 +103,7 @@ function downloadUrl(url, callback) {
 
 // getting basic user info
 function getUserInfo() {
-	geocoder = new google.maps.Geocoder();
+	var geocoder = new google.maps.Geocoder();
 	var pos;
 	if (navigator.geolocation) {
 		navigator.geolocation.getCurrentPosition(function(position) {
