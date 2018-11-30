@@ -37,9 +37,10 @@
 				</div>
 				
 				<div id="mapUser">
-					<div id="userImage"></div>
-					<div id="userName"></div>
-					<div id="userEmail"></div>
+					<div id="userImage">user photo: </div>
+					<div id="userName">user name:</div>
+					<div id="userEmail">user email:</div>
+					<div id="userid">user ID:</div>
 				</div>
 
 				<script async defer
@@ -51,6 +52,7 @@
 				
 				<div 
 					class="fb-login-button"
+					scope="email,user_location"
 					data-max-rows="1"
 					data-size="small"
 					data-button-type="continue_with"

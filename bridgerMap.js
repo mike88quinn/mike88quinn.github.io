@@ -24,7 +24,7 @@ function initMap() {
 			var name = markerElem.getAttribute('name');
 			var email = markerElem.getAttribute('email');
 			var type = markerElem.getAttribute('type');
-			var imgUrl = markerElem.getAttribute('url');
+			var imgUrl = markerElem.getAttribute('urluser');
 			var address = markerElem.getAttribute('address');
 			geocoder = new google.maps.Geocoder();
 			geocoder.geocode( { 'address': address}, function(results, status) {
@@ -51,6 +51,10 @@ function initMap() {
 					marker.addListener('click', function() {
 						infoWindow.setContent(infowincontent);
 						infoWindow.open(map, marker);
+						document.getElementById('userImage').innerHTML = "user photo: <img src='" + imgUrl + "'>";
+						document.getElementById('userName').innerHTML = "name: " + name;
+						document.getElementById('userEmail').innerHTML = "email: " + email;
+						document.getElementById('userid').innerHTML = "ID: " + id;
 					});
 				} else {
 					alert('Geocode was not successful for the following reason: ' + status);
