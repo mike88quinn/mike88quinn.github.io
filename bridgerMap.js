@@ -1,4 +1,11 @@
-
+var customLabel = {
+	restaurant: {
+		label: 'R'
+	},
+	bar: {
+		label: 'B'
+	}
+};
 var geocoder;
 var map, infoWindow;
 function initMap() {
