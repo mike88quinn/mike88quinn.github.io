@@ -1,11 +1,3 @@
-var customLabel = {
-	restaurant: {
-		label: 'R'
-	},
-	bar: {
-		label: 'B'
-	}
-};
 var geocoder;
 var map, infoWindow;
 function initMap() {
@@ -23,7 +15,6 @@ function initMap() {
 			var id = markerElem.getAttribute('id');
 			var name = markerElem.getAttribute('name');
 			var email = markerElem.getAttribute('email');
-			var type = markerElem.getAttribute('type');
 			var address = markerElem.getAttribute('address');
 			geocoder = new google.maps.Geocoder();
 			geocoder.geocode( { 'address': address}, function(results, status) {
@@ -40,7 +31,6 @@ function initMap() {
 					infowincontent.appendChild(document.createElement('br'));
 					infowincontent.appendChild(text);
 					
-					var icon = customLabel[type] || {};
 					var marker = new google.maps.Marker({
 						map: map,
 						position: results[0].geometry.location,
