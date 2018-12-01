@@ -112,7 +112,7 @@ function login() {
 // getting basic user info
 function getUserInfo() {
 	FB.api('/me', 'GET', {fields: 'first_name,last_name,name,id,email,picture'}, function(response) {
-		document.getElementById('userPhoto').innerHTML = response.picture.data.url;
+		document.getElementById('userPhoto').innerHTML = response.picture.data;
 		document.getElementById('name').innerHTML = "name: " + response.name;
 		document.getElementById('email').innerHTML = "email: " + response.email;
 		document.getElementById('id').innerHTML = "ID: " + response.id;
