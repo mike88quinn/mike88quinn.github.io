@@ -11,6 +11,8 @@ function initMap() {
 	downloadUrl('user_data.xml', function(data) {
 		var xml = data.responseXML;
 		var markers = xml.documentElement.getElementsByTagName('marker');
+		// Create an array of alphabetical characters used to label the markers.
+    var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 		Array.prototype.forEach.call(markers, function(markerElem) {
 			var id = markerElem.getAttribute('id');
 			var name = markerElem.getAttribute('name');
