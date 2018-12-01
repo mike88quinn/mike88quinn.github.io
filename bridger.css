@@ -11,11 +11,52 @@ header, main, nav, footer, figure, figcaption, aside, section, article { display
 body { 
 	color: #000000;											/* set text color to black */
 	font-family: "sans-serif";					/* set font to sans serif */
-	background-color: #221a91;					/* set background color to dark blue */
+	background-color: #a2ffe3;					/* set background color to dark blue */
+}
+	   
+header { 
+	background: radial-gradient(100% 50% at top, #a2ffe3,#ffffff);		/* radial fade from dark blue to light blue */
+	color: #000000;																										/* set text color to black */
+	background-position: right;																				/* set text to right */
+	background-repeat: no-repeat;
+	height: 120px;
+	padding-top: 10px;
+	padding-right: 1em;
+	border-bottom: 1px solid #000033;
+}
+
+#headerImage {
+	background-image: url(bridgeHeader.png);
+	float: left;
+	position: relative;
+	height: 109px;
+	width: 200px;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+#smithfield {
+	background-image: url(SmithfieldBridge.jpg);
+	height: 350px;
+	margin-top: 10px;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	margin-left: 80px;
+	margin-right: 80px;
+}
+
+#smithfield {
+	background-image: url(SmithfieldBridge.jpg);
+	height: 350px;
+	margin-top: 10px;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	margin-left: 80px;
+	margin-right: 80px;
 }
 
 main {
-	background: #a2ffe3;								/* set background color to light blue */
+	background: #ffffff;								/* set background color to light blue */
 	margin-left: 150px;
 	margin-right: 150px;
 	padding-top: 1px;
@@ -30,23 +71,11 @@ main {
 	margin: auto;
 	margin-left: 10px;
 	margin-right: 10px;
-	background-color: #a2ffe3;
+	background-color: #ffffff;
 	background-repeat: no-repeat;
 	border: 1px solid #000033;
 	min-width: 960px;
 	max-width: 2048px;
-}
-	   
-header { 
-	background: radial-gradient(200% 150% at top, #221a91,#a2ffe3);		/* radial fade from dark blue to light blue */
-	color: #000000;																										/* set text color to black */
-	background-position: right;																				/* set text to right */
-	background-repeat: no-repeat;
-	height: 120px;
-	padding-top: 10px;
-	padding-right: 1em;
-	margin-left: 10px;
-	margin-right: 10px;
 }
 
 #bridge {
@@ -62,12 +91,10 @@ nav {
 	padding: 0.5em;
 	font-weight: bold;									/* set font to bold */
 	font-size: 100%;
-	background: #a2ffe3;								/* set background color to dark blue */
+	background: #ffffff;								/* set background color to dark blue */
 	text-align: center;
-	border-top: 1px solid #000000;
+	border-bottom: 1px solid #000033;
 	display: block;
-	margin-left: 10px;
-	margin-right: 10px;
 }
 
 nav ul {
@@ -82,9 +109,9 @@ nav a {
 	padding: 10px;
 }
 
-nav a:link		{ color: #000000; }			/* link color black */
+nav a:link		{ color: #a2ffe3; }			/* link color black */
 nav a:visited	{ color: #221a91; }			/* visited link color light blue */
-nav a:hover		{ color: #FFFFFF; }			/* hover color white */
+nav a:hover		{ color: #000000; }			/* hover color white */
 		
 h1 { 
 	margin-top: 4em;
@@ -120,7 +147,7 @@ main ul {
 }
 
 .footer {
-	background-color: #a2ffe3;
+	background-color: #ffffff;
 	padding: 20px;
 	margin-left: 190px;
 	margin-right: 190px;
@@ -179,6 +206,10 @@ input[type="submit"] { margin-left: 130px; }
   
 #contact {
 	font-size: 90%;
+}
+
+form {
+	margin-right: 300px;
 }
 
 /*
