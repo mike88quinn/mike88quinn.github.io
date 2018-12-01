@@ -43,8 +43,6 @@ function initMap() {
 						infoWindow.setContent(infowincontent);
 						infoWindow.open(map, marker);
 					});
-					var markerCluster = new MarkerClusterer(map, markers,
-            {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
 				} else {
 					alert('Geocode was not successful for the following reason: ' + status);
 				}
