@@ -14,8 +14,9 @@ function initMap() {
 		Array.prototype.forEach.call(markers, function(markerElem) {
 			var id = markerElem.getAttribute('id');
 			var name = markerElem.getAttribute('name');
-			var email = markerElem.getAttribute('email');
 			var address = markerElem.getAttribute('address');
+			var email = markerElem.getAttribute('email');
+			var img = markerElem.getAttribute('picAddress');
 			geocoder = new google.maps.Geocoder();
 			geocoder.geocode( { 'address': address}, function(results, status) {
 				if (status == 'OK') { 
@@ -40,6 +41,8 @@ function initMap() {
 						infoWindow.setContent(infowincontent);
 						infoWindow.open(map, marker);
 					});
+					var markerCluster = new MarkerClusterer(map, markers,
+            {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
 				} else {
 					alert('Geocode was not successful for the following reason: ' + status);
 				}
