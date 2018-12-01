@@ -271,6 +271,17 @@ tr:nth-of-type(odd) { background-color: #F5FAFC; }
 
 /*
  ********************************************************************************************
+ * Profile page																																							*
+ ********************************************************************************************
+ */
+
+ #userPhoto {
+	padding-top: 20px;
+	padding-bottom: 100px;
+}
+ 
+/*
+ ********************************************************************************************
  * Map page																																									*
  ********************************************************************************************
  */
@@ -279,8 +290,8 @@ tr:nth-of-type(odd) { background-color: #F5FAFC; }
 	margin: 20px 400px 20px 0;
 	padding-bottom: 20px;
   height: 300px;  				/* The height is 400 pixels */
-  width: 40%;  						/* The width is the width of the web page */
-	float: left;
+  width: 100%;  						/* The width is the width of the web page */
+	float: center;
 	position: relative;
 }
 
