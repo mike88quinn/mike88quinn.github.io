@@ -14,7 +14,7 @@
 	
 		<div id="wrapper">
 		
-			<script type="text/javascript" src="bridger.js?26">
+			<script type="text/javascript" src="bridger.js?27">
 			</script>
 		
 			<header>
@@ -43,17 +43,14 @@
 				<h3>Your profile will be able to be viewed by others</h3>
 				
 				<form enctype="text/plain">
-					<label for="fullName"><div id="name">Full Name: </div></label>
-					<input type="text" name="fullName" id="fullName" required="required">
+					<label for="fullName"><div id="name">Full Name: <input type="text" name="fullName" id="fullName" required="required"></div></label>
 					
-					<label for="email"><div id="email">E-mail: </div></label>
-					<input type="email" name="email" id="email" size="30" required="required">
+					<label for="email"><div id="email">E-mail: <input type="email" name="email" id="email" size="30" required="required"></div></label>
 					
-					<label for="picURL"><div id="userPhoto">User Photo: </div></label>
-					<textarea name="picURL" id="picURL" size="140" required="required"></textarea>
+					<label for="picURL"><div id="userPhoto">User Photo: <textarea name="picURL" id="picURL" size="140" required="required"></textarea></div></label>
 					
-					<label for="facebookID"><div id="id">ID: </div></label>
-					<textarea name="facebookID" id="facebookID" size="140" required="required"></textarea>
+					<label for="facebookID"><div id="id">ID: <textarea name="facebookID" id="facebookID" size="140" required="required"></textarea></div></label>
+					
 					
 					<button id="fbButton" onclick="getUserInfo()">Facebook Info</button>
 				</form>
