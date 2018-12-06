@@ -45,16 +45,6 @@ header {
 	margin-right: 80px;
 }
 
-#smithfield {
-	background-image: url(SmithfieldBridge.jpg);
-	height: 350px;
-	margin-top: 10px;
-	background-size: 100% 100%;
-	background-repeat: no-repeat;
-	margin-left: 80px;
-	margin-right: 80px;
-}
-
 main {
 	background: #ffffff;								/* set background color to light blue */
 	margin-left: 150px;
@@ -89,13 +79,20 @@ main {
 
 nav {
 	padding: 0.5em;
-	font-weight: bold;									/* set font to bold */
+	font-weight: bold;
 	font-size: 100%;
-	background: #ffffff;								/* set background color to dark blue */
 	text-align: center;
 	border-bottom: 1px solid #000033;
 	display: block;
 }
+	
+	nav li {
+		display: inline;
+		padding-top: 0.25em;
+		padding-bottom: 0.25em;
+		padding-left: 0.75em;
+		padding-right: 0.75em;
+	}
 
 nav ul {
 	margin: 0;
@@ -105,7 +102,8 @@ nav ul {
 }
 
 nav a { 
-	text-decoration: none; 
+	text-decoration: none;
+	transition: color 3s ease-out; 
 	padding: 10px;
 }
 
@@ -131,10 +129,6 @@ h2 {
 h3 {
 	font-family: Georgia, Times New Roman, sans-serif;
 	color: #221a91
-}
-
-ul {
-	list-style-image: url(marker.gif); 
 }
 
 main ul {
@@ -350,14 +344,14 @@ tr:nth-of-type(odd) { background-color: #F5FAFC; }
 
 	body {
 		margin: 0;
-		background-color: #FFFFFF;
+		background-color: #a2ffe3;					/* set background color to dark blue */
 	}
 	
 	#wrapper {
 		min-width: 0;
 		width: auto;
 		box-shadow: none;
-		border: none;
+		border: 1px solid #000033;
 	}
 	
 	header {
@@ -373,6 +367,7 @@ tr:nth-of-type(odd) { background-color: #F5FAFC; }
 	
 	main {
 		margin-left: 0;
+		margin-right: 0;
 	}
 	
 	nav {
@@ -384,15 +379,24 @@ tr:nth-of-type(odd) { background-color: #F5FAFC; }
 	
 	nav li {
 		display: inline;
-		padding-top: 0.25em;
-		padding-bottom: 0.25em;
-		padding-left: 0.75em;
-		padding-right: 0.75em;
+		padding: 0;
+		border: 1px solid #000033;
+		border-radius: 15px;
+	}
+	
+	nav ul {
+		padding: .5px;
 	}
 	
 	.footer {
 		margin-left: 0;
-		background-color: #a2ffe3;
+		margin-right: 0;
+		background-color: #ffffff;
+	}
+
+	#smithfield {
+		margin-left: 0;
+		height: 250px;
 	}
 }
 
@@ -405,11 +409,11 @@ tr:nth-of-type(odd) { background-color: #F5FAFC; }
  */
 
 	main {
-		padding-top: 0.1em;
 		padding-bottom: 0.1em;
 		padding-left: 1em;
 		padding-right: 1em;
 		font-size: 90%;
+		margin-left: 0;
 	}
 	
 	h1 {
@@ -421,6 +425,8 @@ tr:nth-of-type(odd) { background-color: #F5FAFC; }
 		padding-bottom: 0.5em;
 		padding-left: 0;
 		height: 120px;
+		border: none;
+		border-bottom: 1px solid #000033;
 	}
 	
 	nav {
@@ -430,11 +436,12 @@ tr:nth-of-type(odd) { background-color: #F5FAFC; }
 	nav li {
 		display: block;
 		margin: 0;
-		border-bottom: 2px solid #000033;
+		border-top: 1px solid #000033;
 	}
 	
 	nav ul {
 		display: block;
+		padding-inline-start: 0;
 	}
 	
 	#mobile {
@@ -444,4 +451,25 @@ tr:nth-of-type(odd) { background-color: #F5FAFC; }
 	#desktop {
 		display: none;
 	}
+	
+	#gallery {
+		display: none;
+	}
+
+	#smithfield {
+		background-image: none;
+		height: 0;
+	}
+	
+	#headerImage {
+		background-image: none;
+		height: 0;
+	}
+	
+	label {
+		float: none;
+		text-align: left;
+	}
+		
+	input[type="submit"] { margin-left: 0; }
 }
