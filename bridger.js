@@ -112,9 +112,9 @@ function login() {
 // getting basic user info
 function getUserInfo() {
 	FB.api('/me', 'GET', {fields: 'first_name,last_name,name,id,email,picture.width(150).height(150)'}, function(response) {
-		document.getElementById('userPhoto').innerHTML = "user photo: </br> <img src='" + response.picture.data.url + "'>";
-		document.getElementById('name').innerHTML = "name: " + response.name;
-		document.getElementById('email').innerHTML = "email: " + response.email;
+		document.getElementById('userPhoto').innerHTML = "User Photo: </br> <img src='" + response.picture.data.url + "'>";
+		document.getElementById('name').innerHTML = "Full Name: " + response.name;
+		document.getElementById('email').innerHTML = "E-mail: " + response.email;
 		document.getElementById('id').innerHTML = "ID: " + response.id;
 	});
 }
