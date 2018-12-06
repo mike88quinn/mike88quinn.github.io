@@ -14,7 +14,7 @@
 	
 		<div id="wrapper">
 		
-			<script type="text/javascript" src="bridger.js?28">
+			<script type="text/javascript" src="bridger.js?29">
 			</script>
 		
 			<header>
@@ -44,30 +44,33 @@
 				
 				<form enctype="text/plain">
 					<div id="name">
+						<button id="fbButton" onclick="getUserName()">Get Name From Facebook</button>
 						<label for="fullName">Full Name: 
 						</label>
-						<input type="text" name="fullName" id="fullName" required="required">
+						<input type="text" name="fullName" id="fullName">
 					</div>
 					
 					<div id="email">
+						<button id="fbButton" onclick="getUserEmail()">Get E-mail From Facebook</button>
 						<label for="email">E-mail: 
 						</label>
-						<input type="email" name="email" id="email" size="30" required="required">
+						<input type="email" name="email" id="email" size="30">
 					</div>
 					
 					<div id="userPhoto">
-						<label for="picURL">User Photo: 
+						<button id="fbButton" onclick="getUserPhoto()">Get Photo From Facebook</button>
+						<label for="picURL">User Photo URL: 
 						</label>
-						<textarea name="picURL" id="picURL" size="140" required="required"></textarea>
+						<textarea name="picURL" id="picURL" size="140"></textarea>
 					</div>
 					
 					<div id="id">
-						<label for="facebookID">ID: 
+						<button id="fbButton" onclick="getUserID()">Get ID From Facebook</button>
+						<label for="facebookID">Facebook ID: 
 						</label>
-						<textarea name="facebookID" id="facebookID" size="140" required="required"></textarea>
+						<textarea name="facebookID" id="facebookID" size="140"></textarea>
 					</div>
 					
-					<button id="fbButton" onclick="getUserInfo()">Facebook Info</button>
 				</form>
 				
 			</main>

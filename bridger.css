@@ -311,7 +311,9 @@ tr:nth-of-type(odd) { background-color: #F5FAFC; }
 }
 
  #fbButton {
-	margin-top: 20px;
+	float: right;
+	position: relative;
+	margin: auto;
 }
  
 /*

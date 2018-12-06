@@ -110,11 +110,29 @@ function login() {
 }
 		
 // getting basic user info
-function getUserInfo() {
+function getUserPhoto() {
 	FB.api('/me', 'GET', {fields: 'first_name,last_name,name,id,email,picture.width(150).height(150)'}, function(response) {
-		document.getElementById('userPhoto').innerHTML = "User Photo: </br> <img src='" + response.picture.data.url + "'>";
+		document.getElementById('userPhoto').innerHTML = "User Photo: <img src='" + response.picture.data.url + "'>";
+	});
+}
+		
+// getting basic user info
+function getUserName() {
+	FB.api('/me', 'GET', {fields: 'first_name,last_name,name,id,email,picture.width(150).height(150)'}, function(response) {
 		document.getElementById('name').innerHTML = "Full Name: " + response.name;
+	});
+}
+		
+// getting basic user info
+function getUserEmail() {
+	FB.api('/me', 'GET', {fields: 'first_name,last_name,name,id,email,picture.width(150).height(150)'}, function(response) {
 		document.getElementById('email').innerHTML = "E-mail: " + response.email;
+	});
+}
+		
+// getting basic user info
+function getUserID() {
+	FB.api('/me', 'GET', {fields: 'first_name,last_name,name,id,email,picture.width(150).height(150)'}, function(response) {
 		document.getElementById('id').innerHTML = "ID: " + response.id;
 	});
 }
