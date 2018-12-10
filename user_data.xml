@@ -9,7 +9,6 @@
 	<marker id="07" name="Everett Lloyd" address="Beijing, China" email="example@foo.com"/>
 	<marker id="08" name="Austin Hall" address="Mexico City, Mexico" email="example@foo.com"/>
 	<marker id="09" name="Laurence Fleming" address="Al-Qahirah, Egypt" email="example@foo.com"/>
-	<marker id="10" name="Leon Mckinney" address="New York, NY" email="example@foo.com"/>
+	<marker id="10" name="Leon Mckinney" address="Sydney, Australia" email="example@foo.com"/>
 	<marker id="11" name="Orville Chapman" address="cape town, south africa" email="example@foo.com"/>
-	<marker id="12" name="Rachel Hogan" address="Sydney, Australia" email="example@foo.com"/>
 </markers>
