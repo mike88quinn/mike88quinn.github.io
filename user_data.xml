@@ -1,5 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <markers>
-	<marker id="10155880754737717" name="Michael Quinn" address="venetia, pa" email="MTQuinn@mail.fhsu.edu"/>
-	<marker id="2" name="Mike Quinn" address="mcmurray pa" email="Mike88Quinn@gmail.com"/>
+	<marker id="01" name="Michael Quinn" address="venetia, pa" email="MTQuinn@mail.fhsu.edu"/>
+	<marker id="02" name="Roger	Fields" address="Hays ks" email="example@foo.com"/>
+	<marker id="03" name="Percy	Dean" address="Tokyo, Japan" email="example@foo.com"/>
+	<marker id="04" name="Douglas	Gordon" address="Delhi, India" email="example@foo.com"/>
+	<marker id="05" name="Harry	Ward" address="Shanghai, China" email="example@foo.com"/>
+	<marker id="06" name="Shaun	Logan" address="Mumbai India" email="example@foo.com"/>
+	<marker id="07" name="Billy	Summers" address="São Paulo, Brazil" email="example@foo.com"/>
+	<marker id="08" name="Everett	Lloyd" address="Beijing, China" email="example@foo.com"/>
+	<marker id="09" name="Austin	Hall" address="Mexico City, Mexico" email="example@foo.com"/>
+	<marker id="10" name="Ismael	Obrien" address="Osaka, Japan" email="example@foo.com"/>
+	<marker id="11" name="Laurence	Fleming" address="Al-Qahirah, Egypt" email="example@foo.com"/>
+	<marker id="12" name="Leon	Mckinney" address="Newark, USA" email="example@foo.com"/>
+	<marker id="13" name="Nicolas	Gardner" address="Dhaka, Bangladesh" email="example@foo.com"/>
+	<marker id="14" name="Jean	Wilkerson" address="Karachi, Pakistan" email="example@foo.com"/>
+	<marker id="15" name="Tyler	Warren" address="Buenos Aires, Argentina" email="example@foo.com"/>
+	<marker id="16" name="Leroy	Walker" address="Kolkata, India" email="example@foo.com"/>
+	<marker id="17" name="Orville	Chapman" address="Istanbul, Turkey" email="example@foo.com"/>
+	<marker id="18" name="Rosemarie	Alexander" address="Chongqing, China" email="example@foo.com"/>
+	<marker id="19" name="Tina	Benson" address="Eko, Nigeria" email="example@foo.com"/>
+	<marker id="20" name="Corey	Glover" address="Manila, Philippines" email="example@foo.com"/>
+	<marker id="21" name="Rafael	Lee" address="Guangzhou, China" email="example@foo.com"/>
+	<marker id="22" name="Rachel	Hogan" address="Rio de Janeiro, Brazil" email="example@foo.com"/>
+	<marker id="23" name="Karen	Clayton" address="Los Angelles, CA" email="example@foo.com"/>
+	<marker id="24" name="Glen	Austin" address="Moscow, Russia" email="example@foo.com"/>
+	<marker id="25" name="Marcella	Ball" address="Kinshasa, Congo " email="example@foo.com"/>
+	<marker id="26" name="Dwayne	Perry" address="Tianjin, TJ, China" email="example@foo.com"/>
+	<marker id="27" name="Herman	Payne" address="Paris, France" email="example@foo.com"/>
+	<marker id="28" name="Mercedes	Rogers" address="Shenzhen, China" email="example@foo.com"/>
+	<marker id="29" name="Patty	Little" address="Jakarta, Indonesia" email="example@foo.com"/>
+	<marker id="30" name="Carl	Wood" address="London United, Kingdom" email="example@foo.com"/>
+	<marker id="31" name="Diana	Hill" address="Bangalore, India" email="example@foo.com"/>
+	<marker id="32" name="Molly	Carr" address="Lima, Peru" email="example@foo.com"/>
+	<marker id="33" name="Darren	Soto" address="Chennai, India" email="example@foo.com"/>
+	<marker id="34" name="Rufus	Marshall" address="Seoul-Incheon, South Korea" email="example@foo.com"/>
+	<marker id="35" name="Josephine	Hubbard" address="Bogota, Colombia" email="example@foo.com"/>
+	<marker id="36" name="Willard	Ruiz" address="Nagoya, Japan" email="example@foo.com"/>
+	<marker id="37" name="Clara	Mendez" address="Johannesburg, South Africa" email="example@foo.com"/>
+	<marker id="38" name="John	Jacobs" address="Bangkok, Thailand" email="example@foo.com"/>
+	<marker id="39" name="Woodrow	Castro" address="Hyderabad, India" email="example@foo.com"/>
+	<marker id="40" name="Kristine	Patton" address="Chicago, United States" email="example@foo.com"/>
+	<marker id="41" name="Rosa	Mcguire" address="Lahore, Pakistan" email="example@foo.com"/>
+	<marker id="42" name="Robin	Jefferson" address="Tehran, Iran" email="example@foo.com"/>
+	<marker id="43" name="Victoria	Dennis" address="Ho Chi Minh City, Viet Nam" email="example@foo.com"/>
+	<marker id="44" name="Lynn	Love" address="Foshan, Foshan" email="example@foo.com"/>
+	<marker id="45" name="Ed	Knight" address="Kuala Lumpu, Malaysia" email="example@foo.com"/>
+	<marker id="46" name="Desiree	Franklin" address="St. Petersburg, Russia" email="example@foo.com"/>
+	<marker id="47" name="Joy	Flores" address="Washington, D.C., United States" email="example@foo.com"/>
+	<marker id="48" name="Mabel	Webb" address="Montréal, Canada" email="example@foo.com"/>
+	<marker id="49" name="Ramon	Greer" address="Medellin, Colombia" email="example@foo.com"/>
+	<marker id="50" name="Elsie	Alvarez" address="Fortaleza, Brazil" email="example@foo.com"/>
+	<marker id="51" name="Evelyn	Mathis" address="Miami, United States" email="example@foo.com"/>
 </markers>
