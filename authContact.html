@@ -40,7 +40,8 @@
 				<h3>Contact Us With Your Comments and Suggestions</h3>
 				
 				<p>Required fields are marked with an asterisk *</p>
-			
+				
+				<form method="GET" action="mailto:test@example.com" enctype="text/plain">
 					<label for="myFName">*First Name:</label>
 					<input type="text" name="myFName" id="myFName" required="required">
 					
@@ -51,7 +52,10 @@
 					<input type="email" name="myEmail" id="myEmail" size="30" required="required">
 					
 					<label for="myComments">*Comments and Suggestions:</label>
-					<textarea name="myComments" id="myComments" rows="10" cols="50" required="required"></textarea>
+					<textarea name="myComments" id="myComments" rows="2" cols="30" required="required"></textarea>
+					
+					<input type="submit" value="Send">
+				</form>
 					
 			</main>
 			

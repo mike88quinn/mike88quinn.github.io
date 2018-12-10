@@ -40,34 +40,34 @@
 				
 				<h2>Profile Page</h2>
 				
-				<h3>Your profile will be able to be viewed by others</h3>
+				<h3>Your profile will be generated from your Facebook data</h3>
 				
 					<div id="name">
-						<button id="fbButton" onclick="getUserName()">Get Name From Facebook</button>
 						<label for="fullName">Full Name: 
 						</label>
 						<input type="text" name="fullName" id="fullName">
+						<button id="fbButton" onclick="getUserName()">Name</button>
 					</div>
 					
 					<div id="email">
-						<button id="fbButton" onclick="getUserEmail()">Get E-mail From Facebook</button>
-						<label for="email">E-mail: 
+						<label for="email">Email: 
 						</label>
 						<input type="email" name="email" id="email" size="30">
+						<button id="fbButton" onclick="getUserEmail()">Email</button>
 					</div>
 					
 					<div id="userPhoto">
-						<button id="fbButton" onclick="getUserPhoto()">Get Photo From Facebook</button>
 						<label for="picURL">User Photo URL: 
 						</label>
 						<textarea name="picURL" id="picURL" size="140"></textarea>
+						<button id="fbButton" onclick="getUserPhoto()">Photo</button>
 					</div>
 					
 					<div id="id">
-						<button id="fbButton" onclick="getUserID()">Get ID From Facebook</button>
 						<label for="facebookID">Facebook ID: 
 						</label>
 						<textarea name="facebookID" id="facebookID" size="140"></textarea>
+						<button id="fbButton" onclick="getUserID()">ID</button>
 					</div>
 				
 			</main>

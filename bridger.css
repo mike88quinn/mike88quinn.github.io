@@ -305,9 +305,10 @@ tr:nth-of-type(odd) { background-color: #F5FAFC; }
 }
 
  #fbButton {
-	float: right;
-	margin-right: 400px;
-	position: relative;
+	float: left;
+	margin-left: 500px;
+	margin-top: -50px;
+	position: absolute;
 }
  
 /*
@@ -386,6 +387,12 @@ tr:nth-of-type(odd) { background-color: #F5FAFC; }
 	
 	nav ul {
 		padding: .5px;
+	} 
+	
+	#fbButton {
+		float: right;
+		margin-right: 100px;
+		position: relative;
 	}
 	
 	.footer {

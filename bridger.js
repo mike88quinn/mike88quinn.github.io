@@ -126,7 +126,7 @@ function getUserName() {
 // getting basic user info
 function getUserEmail() {
 	FB.api('/me', 'GET', {fields: 'first_name,last_name,name,id,email,picture.width(150).height(150)'}, function(response) {
-		document.getElementById('email').innerHTML = "E-mail: " + response.email;
+		document.getElementById('email').innerHTML = "Email: " + response.email;
 	});
 }
 		
