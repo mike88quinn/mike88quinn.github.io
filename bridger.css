@@ -446,16 +446,10 @@ tr:nth-of-type(odd) { background-color: #F5FAFC; }
 	
 	.fb-share-button span {
    top: -6px;
-	 margin: 0:;
 	}
 
 	.footerText {
-		float: right;
-		text-align: center;
-		font-size: 75%;
-		font-style: italic;
-		font-family: Georgia, Times New Roman, sans-serif;
-		margin: 0;
+		display: none;
 	}
 	
 	#mobile {
