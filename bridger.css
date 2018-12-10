@@ -393,10 +393,6 @@ tr:nth-of-type(odd) { background-color: #F5FAFC; }
 		margin-right: 0;
 		background-color: #ffffff;
 	}
-	
-	.fb-share-button span {
-   top: -12px;
-	}
 
 	#smithfield {
 		margin-left: 0;
@@ -446,6 +442,10 @@ tr:nth-of-type(odd) { background-color: #F5FAFC; }
 	nav ul {
 		display: block;
 		padding-inline-start: 0;
+	}
+	
+	.fb-share-button span {
+   top: -12px;
 	}
 	
 	#mobile {
