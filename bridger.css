@@ -176,10 +176,13 @@ main ul {
  ********************************************************************************************
  */
 
-video, embed { 
+video { 
 	float: right;
-	margin-top: -60px;
+	top: -10px;
+	margin-left: 20px;
 	position: relative;
+	width: 320px;
+	height: 240px;
 }
 
 /*
@@ -488,6 +491,9 @@ tr:nth-of-type(odd) { background-color: #F5FAFC; }
 		background-image: none;
 		height: 0;
 	}
+video {
+	display: none;
+}
 	
 	#headerImage {
 		background-image: none;
